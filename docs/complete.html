@@ -18,24 +18,35 @@
       article { padding:0px; box-shadow: none ; }
     }
 
-    section { page-break-inside:avoid; break-inside:avoid; }
-
+    li { page-break-inside:avoid; break-inside:avoid; }
+    /* hack to avoid page break after: https://stackoverflow.com/questions/9238868 */
+    h2, h3 { break-inside:avoid; }
+    h2::after, h3::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
 
     h1 { font-weight:400; font-size:24pt; margin-bottom:2pt; }
-    h2 { font-weight:400; font-size:20pt; margin-bottom:6pt; }
-    h3 { font-weight:400; font-size:14pt; margin-bottom:4pt; }
-
+    h2 { font-weight:400; font-size:20pt; margin-bottom:8pt; margin-top:16pt; }
+    h3 { font-weight:400; font-size:14pt; margin-bottom:6pt; }
+    
     li, p { font-weight:300; font-size:12pt; line-height:1.3em;}
     a, a:visited { color:#2E75B5; text-decoration:none; }
+    li a { text-decoration:underline; }
     strong { font-weight:500; color:#2E75B5; }
     em { font-style:normal; color:#2E75B5; }
-
-    ul { margin-left:22px;}
+    
     li { list-style-type: square; }
-
-    li p { margin-bottom:3pt; }
+    
+    section > p { margin-bottom:6pt; }
+    ul { margin-left:22px; margin-bottom:10pt; }
+    
     li { margin-bottom:6pt; }
+    li p { margin-bottom:3pt; }
+    
+    ul.condensed li { margin-bottom:3pt; }
+    ul.condensed li p { margin-bottom:0pt; }
 
+    ul.semicondensed li { margin-bottom:6pt; }
+    ul.semicondensed li p { margin-bottom:0pt; }
+    
   </style>
 </head>
 
@@ -44,7 +55,7 @@
 
   <header>
     <h1>Tomas Petricek</h1>
-    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a></p>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
   </header>  
 
   <section>
@@ -60,6 +71,8 @@
 and Physics to pursue fundamental research on simple, open and trustworthy programming systems,
 using theoretical, applied and interdisciplinary research methods.</p>
       </li>
+      
+      
       
       
       
@@ -92,10 +105,13 @@ Resulting research was awarded a <em>Distinguished Paper</em> award and selected
       
       
       
+      
+      
       <li>
         <p><strong>PhD, Computer Laboratory, University of Cambridge</strong>, 2011 – 2016</p>
         <p>Thesis <em>Context-aware Programming Languages</em> develops coeffects, a theory for tracking information about
-environment in which programs are executed. Supervised by <em>Prof. Alan Mycroft</em>.</p>
+environment in which programs are executed. I also devised a novel way of presenting the results in the form of
+widely read interactive essay (<a href="http://tomasp.net/coeffects">tomasp.net/coeffects</a>). Supervised by <em>Prof. Alan Mycroft</em>.</p>
       </li>
       
       
@@ -104,8 +120,9 @@ environment in which programs are executed. Supervised by <em>Prof. Alan Mycroft
       
       <li>
         <p><strong>BSc and MSc, Computer Science, Charles University, Prague</strong>, 2004 – 2010</p>
-        <p>MSc degree completed with distinction. My final thesis, supervised by Dr Don Syme, developed
-abstractions for reactive and concurrent programming that were presented in workshop papers.</p>
+        <p>MSc completed with distinction. Final thesis <em>Reactive Programming with Events</em>,
+supervised by Dr Don Syme, developed abstractions for reactive and concurrent programming that were presented
+in workshop papers.</p>
       </li>
       
       
@@ -152,7 +169,7 @@ travel and registration expenses for top-tier programming language conferences P
   
   <section>
     <h3>Awards</h3>
-    <ul>
+    <ul class="condensed">
       
       
       <li>
@@ -186,6 +203,560 @@ making it one of the three best programming language papers of the past year.</p
       
       <li>
         <p><strong>Microsoft MVP Award</strong>, 2004 – 2023. Awarded annually for contributions to the F# community</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>Academic Collaboration and Recognition</h2>
+    <h3>Professional Membership</h3>
+    <ul class="semicondensed">
+      
+      
+      <li>
+        <p><strong>IFIP TC2 Working Group 2.16 Language Design</strong> (2024 – present). Member of an invitation-based group of 40&nbsp;leading programming language experts that meets twice a year for an intensive week-long meeting.</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h3>Project Participation</h3>
+    <ul class="semicondensed">
+      
+      
+      <li>
+        <p><strong>Language, Picture, Gesture: Forms of Discursivity</strong> (<em>Junior Researcher</em>), UNCE, MFF UK (2024 – present)</p>
+        <p>Studying programming and interactive systems from a broader inter-disciplinary perspective.</p>
+      </li>
+      
+      <li>
+        <p><strong>ExtremeXP</strong> (<em>Member</em>), Horizon Europe, MFF UK (2023 – present)</p>
+        <p>Contributing to the design of novel data visualization tools and gamification systems.</p>
+      </li>
+      
+      <li>
+        <p><strong>PROGRAMme: What is a computer program?</strong> (<em>Member</em>), ANR France (2017 – present)</p>
+        <p>Interdisciplinary collaborative project, serving as co-editor for the resulting work-in-progress book.</p>
+      </li>
+      
+      <li>
+        <p><strong>AIDA: AI in Data Science</strong> (<em>Member</em>), The Alan Turing Institute (2016 – 2018)</p>
+        <p>Reshaped the project to allow integration of work by 3 post-docs and 1 PhD student.</p>
+      </li>
+      
+    </ul>
+  </section>
+ 
+  <section>
+    <h3>Research Visits</h3>
+    <ul class="condensed">
+      
+      
+      <li>
+        <p><strong>UC Santa Cruz</strong> (April 2023). One-day visit, collaboration on programming systems research</p>
+      </li>
+      
+      <li>
+        <p><strong>HPI Potsdam</strong> (November 2023). Two-day visit, collaboration on programming systems research</p>
+      </li>
+      
+      <li>
+        <p><strong>Aarhus University</strong> (May 2022). Two-day visit, collaboration on programming systems research</p>
+      </li>
+      
+      <li>
+        <p><strong>UC Berkeley (virtual)</strong> (November 2022). Remote talk at the <em>Programming Systems</em> seminar</p>
+      </li>
+      
+      <li>
+        <p><strong>MIT SDG</strong> (April 2021). Remote invited talk on programming as architecture and urban planning</p>
+      </li>
+      
+      <li>
+        <p><strong>Huawei Research Edinburgh (virtual)</strong> (May 2021). Remote invited talk on data exploration tools</p>
+      </li>
+      
+      <li>
+        <p><strong>Facebook</strong> (October 2020). Virtual invited talk on types for data exploration tools</p>
+      </li>
+      
+      <li>
+        <p><strong>University of Glasgow</strong> (May 2019). One-day visit, talk on data-rich programming languages</p>
+      </li>
+      
+      <li>
+        <p><strong>TU Darmstadt</strong> (April 2019). Two-day visit, presenting work on coeffects and type providers</p>
+      </li>
+      
+      <li>
+        <p><strong>IFIP 2.16 Working Group</strong> (November 2019). Guest at a week-long meeting, talk on programming as interaction</p>
+      </li>
+      
+      <li>
+        <p><strong>Université de Lille</strong> (January 2018). Talk at <em>What is a program? Historical &amp; philosophical perspectives</em></p>
+      </li>
+      
+      <li>
+        <p><strong>University of Birmingham</strong> (January 2018). One-day visit, talk on data-rich programming languages</p>
+      </li>
+      
+      <li>
+        <p><strong>University of Edinburgh</strong> (August 2018). One-day visit, talk on programming as human-data interaction</p>
+      </li>
+      
+      <li>
+        <p><strong>Tallinn University of Technology</strong> (December 2013). Two-week visit focused on context-aware computing</p>
+      </li>
+      
+      <li>
+        <p><strong>Rensselaer Polytechnic Institute</strong> (February 2013). One-day visit focused on data and type providers</p>
+      </li>
+      
+      <li>
+        <p><strong>MIT CSAIL</strong> (February 2013). Two-day visit, talk on context-aware programming</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h3>Keynotes and Invited Talks</h3>
+    <ul class="condensed">
+      
+      
+      <li>
+        <p><strong>Data Science in F#</strong>, Berlin (September 2023).
+          <em>Keynote</em>: Designing composable visualizations
+        </p>
+      </li>
+      
+      <li>
+        <p><strong>ASL/APA Meeting</strong>, San Francisco (April 2023).
+          <em>Invited Talk</em>: Cultures of programming
+        </p>
+      </li>
+      
+      <li>
+        <p><strong>Huawei Global Technology Summit</strong>, Edinburgh (July 2022).
+          <em>Invited Talk</em>: Rethinking data exploration tools
+        </p>
+      </li>
+      
+      <li>
+        <p><strong>CodeMesh</strong>, Virtual (November 2020).
+          <em>Keynote</em>: Cultures of programming
+        </p>
+      </li>
+      
+      <li>
+        <p><strong>ScalaDays</strong>, Berlin (May 2018).
+          <em>Keynote</em>: Functionalist programming language design
+        </p>
+      </li>
+      
+      <li>
+        <p><strong>Data Science Summit</strong>, Cambridge (June 2017).
+          <em>Keynote</em>: The Gamma: Democratizing data science
+        </p>
+      </li>
+      
+      <li>
+        <p><strong>ManLang Conference</strong>, Prague (Sept 2017).
+          <em>Keynote</em>: Language Challenges of Targeting Multiple Runtimes
+        </p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>Community Service and Administration</h2>
+    <h3>Refereeing</h3>
+    <ul>
+      <li><p><strong>Program Committee Member.</strong>
+        
+        Undone CS 2024, PX 2024, Onward! Essays 2024, Onward! 2024, OOPSLA 2024, PX 2023, ECOOP 2023, PAINT 2023, Onward! Essays 2023, Programming 2023, PAINT 2023, OOPSLA 2023, ProWeb 2022, HaPoP 2022, PADL 2022, ECOOP 2022, PX 2022, Programming 2022, HOPL IV 2021, Programming 2021, Onward! Essays 2021, AutoDS 2021, PX 2020, SdR 2020, LIVE 2020, ProWeb 2020, SdR 2019, SdR 2019, HaPoC 2019, Onward! Essays 2019, HFM 2019, LIVE 2019, IFL 2018, HaPoP 2018, DSJM 2018, OBT 2017, HaPoC 2017, DS+J 2017, TyDe 2016, TFP 2015, ML 2013, CUFP 2012, ISMM 2012      
+      </p></li>
+      <li><p><strong>Reviewer.</strong>
+        In the past, I also reviewed papers for
+        UIST, Computing, TOPLAS, Programming, Minds and Machines, Philosophy &amp; Technology, ECOOP, PLoP, Simulation, Software: Practice and Experience, EICS, ICFP, IEEE Access, POPL, Journal of Logic and Algebraic Methods in Programming, PLACES, TFP, PPDP, CC, Computability in Europe, TLCA      
+      </p></li>
+      <li><p><strong>PhD Examiner.</strong>
+        I reviewed PhD theses completed at
+        
+        Hasso Plattner Institute (2024), Université Paris-Saclay (2024), CTU Prague (2023), University of Ghent (2022)      
+      </p></li>
+      <li><p><strong>Grant Proposal Reviewer.</strong>
+        I reviewed grant proposals for
+        GAUK (Czechia), FONDECYT (Chile), The Alan Turing Institute (UK), EPSRC (UK), ISF (Israel)      
+      </p></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Service</h3>
+    <ul class="condensed">
+      
+      
+      <li>
+        <p><strong>General Chair</strong>, International Conference on the Art, Science, and Engineering of Programming, 2025</p>
+      </li>
+      
+      <li>
+        <p><strong>Steering Committee Member</strong>, AOSA, Inc., 2024 – present</p>
+      </li>
+      
+      <li>
+        <p><strong>Symposium Co-chair</strong>, Symposium on History and Philosophy of Programming (HaPoP5), Lille, 2022</p>
+      </li>
+      
+      <li>
+        <p><strong>Special Issue Editor</strong>, Programming and Computing in Context, Philosophy &amp; Technology, 2020</p>
+      </li>
+      
+      <li>
+        <p><strong>Track Chair</strong>, Symposium on New Ideas in Programming and Reflections on Software (Onward!), 2019</p>
+      </li>
+      
+      <li>
+        <p><strong>Steering Committee Member</strong>, Onward!, 2019 – present</p>
+      </li>
+      
+      <li>
+        <p><strong>Symposium Chair</strong>, Symposium on History and Philosophy of Programming (HaPoP4), Oxford, 2018</p>
+      </li>
+      
+      <li>
+        <p><strong>Workshop Co-chair</strong>, Salon des Refusés: Dialectics for New Computer Science, ‹Programming› 2018 and 2017</p>
+      </li>
+      
+      <li>
+        <p><strong>Council Member and Vice-President</strong>, Commission for the History and Philosophy of Computing, 2017 – 2021</p>
+      </li>
+      
+      <li>
+        <p><strong>Founding Board Member</strong>, The F# Software Foundation, 2014</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h3>Administration</h3>
+    <ul class="semicondensed">
+      
+      
+      <li>
+        <p><strong>Academic Misconduct Panel Member</strong>, University of Kent, 2021 – 2022</p>
+        <p>Reviewed 30+ reports of plagiarism and other academic misconduct.</p>
+      </li>
+      
+      <li>
+        <p><strong>Year in Computing Review Committee Chair</strong>, University of Kent, 2021</p>
+        <p>Leading a review of programme teaching structure and implemented changes for 2022/23.</p>
+      </li>
+      
+      <li>
+        <p><strong>Year in Computing Admissions Officer</strong>, University of Kent, 2020 – 2022</p>
+        <p>Interviewed 100+ applicants for a programme offered to non-computer science students.</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>Teaching and Supervision</h2>
+    <h3>Teaching Qualifications</h3>
+    <ul class="condensed">
+      
+      
+      
+      
+      
+      <li>
+        <p><strong>Postgraduate Certificate in Higher Education (PGCHE)</strong>, University of Kent, 2019 – 2021</p>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </section>
+
+  <section>
+    <h3>Research Supervision</h3>
+    <ul class="semicondensed">
+      
+      
+      <li>
+        <p><strong>Jan Liam Verter</strong> (PhD Student), Charles University, 2024 – present</p>
+        <p>Research topic <em>Semantics Engineering with Concrete Syntax and Theorem Proving</em>.</p>
+      </li>
+      
+      <li>
+        <p><strong>Joel Jakubovic</strong> (Post-doctoral Researcher), Charles University, 2024 – present</p>
+        <p>Research topic <em>Graphical Constraint Programming for Notational Freedom</em>.</p>
+      </li>
+      
+      <li>
+        <p><strong>Nour Boulahcen</strong> (Undergraduate Internship), University of Kent, May 2019 – June 2019</p>
+        <p>Design and development of type provider for graph databases.</p>
+      </li>
+      
+      <li>
+        <p><strong>Joel Jakubovic</strong> (PhD Student), University of Kent, 2019 – 2023</p>
+        <p>Thesis <em>Achieving Self-Sustainability in Interactive Graphical Programming Systems</em>. Graduated in 2023.</p>
+      </li>
+      
+      <li>
+        <p><strong>Roly Perera</strong> (Post-doctoral Researcher), The Alan Turing Institute, 2019</p>
+        <p>Program change tracking with applications in AI research. Now Early Career Advanced
+Fellow, Institute of Computing for Climate Science, <em>University of Cambridge</em>.</p>
+      </li>
+      
+      <li>
+        <p><strong>Mariana Marasoiu, Pablo León-Villagrá, Sarwar Islam</strong> (Research Internship), The Alan Turing Institute, 2017</p>
+        <p>Tools for data journalism with <em>The Bureau of Investigative Journalism</em>, resulting in two workshop papers.</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h3>Teaching Experience</h3>
+    <ul class="condensed">
+      
+      
+      <li>
+        <p><strong>Advanced C# Programming (NPRG038)</strong>, Charles University, 2023/2024, <em>Course lab supervisor</em></p>
+      </li>
+      
+      <li>
+        <p><strong>Write Your Own Tiny Programming Systems (NPRG077)</strong>, Charles University, 2023/2024</p>
+      </li>
+      
+      <li>
+        <p><strong>Introduction to Linux (NSWI177)</strong>, Charles University, 2022/2023, <em>Course lab supervisor</em></p>
+      </li>
+      
+      <li>
+        <p><strong>Programming Language Design (NPRG075)</strong>, Charles University, 2022/2023</p>
+      </li>
+      
+      <li>
+        <p><strong>Software Development (CO559), BSc</strong>, University of Kent, 2021/2022</p>
+      </li>
+      
+      <li>
+        <p><strong>Algorithms, Correctness and Efficiency (CO518), BSc</strong>, University of Kent, 2019/2020</p>
+      </li>
+      
+      <li>
+        <p><strong>Project and Dissertation (CO880), MSc</strong>, University of Kent, 2018/19 – 2021/2022, <em>Thesis supervision</em></p>
+      </li>
+      
+      <li>
+        <p><strong>Group Project (CO600), BSc</strong>, University of Kent, 2018/2019 – 2021/2022, <em>Final year project supervision</em></p>
+      </li>
+      
+      <li>
+        <p><strong>Computer Interaction and User Experience (CO582), BSc</strong>, University of Kent, 2018/2019 – 2019/2020</p>
+      </li>
+      
+      <li>
+        <p><strong>Software Engineering (CO886), MSc</strong>, University of Kent, 2018/2019 – 2021/2022</p>
+      </li>
+      
+      <li>
+        <p><strong>Supervisions (Part IB and II), BA</strong>, University of Cambridge, 2011 – 2017, Small group teaching covering programming language concepts, types, operational and denotational semantics and compilers.</p>
+      </li>
+      
+      <li>
+        <p><strong>Programming language F# (NPRG049)</strong>, Charles University, 2009/2010</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    
+    
+    
+    
+    
+    <h3>Supervised Theses</h3>
+    <p>I supervised 12 Bachelor's theses (10 defended) and
+      2 Master's theses (2 defended).
+      At University of Kent, I&nbsp;supervised students for a range of final year projects including
+      4 students in <em>Year in Computing Project (BSc)</em>,
+      25+ students for <em>Group Project (BSc)</em> and 
+      10 students for <em>Project and Dissertation (MSc)</em>.
+    </p>
+
+    <ul class="condensed">
+      
+      
+      <li>
+        <p><strong>Interactive Pandemic Simulation to Encourage Critical Thinking</strong> (ongoing), BSc thesis, Sára Goldscheiderová</p>
+      </li>
+      
+      <li>
+        <p><strong>Data-driven Low-code Programming System</strong> (ongoing), BSc thesis, Jaroslav Švarc</p>
+      </li>
+      
+      <li>
+        <p><strong>Type Providers for TypeScript</strong> (2024), MSc thesis, Ondřej Roztočil</p>
+      </li>
+      
+      <li>
+        <p><strong>Reconstructing the Pygmalion Programming Environment</strong> (2024), BSc thesis, Adrián Habušta</p>
+      </li>
+      
+      <li>
+        <p><strong>Query Langauge for Relational Databases</strong> (2024), BSc thesis, David Koňařík</p>
+      </li>
+      
+      <li>
+        <p><strong>Design of LLM Prompts for Iterative Data Exploration</strong> (2024), BSc thesis, Mikoláš Fromm</p>
+      </li>
+      
+      <li>
+        <p><strong>Combining Effects with Dependent Types</strong> (2024), BSc thesis, Maya Mückenschnabel</p>
+      </li>
+      
+      <li>
+        <p><strong>AgentLang - Programming Language for Agent-based Modeling</strong> (2024), BSc thesis, Tomáš Boďa</p>
+      </li>
+      
+      <li>
+        <p><strong>Abstract Interpretation of pandas</strong> (2024), BSc thesis, Jan Hrubý</p>
+      </li>
+      
+      <li>
+        <p><strong>Functional Reactive Programming for Data Binding in C#</strong> (2013), BSc thesis, David Barker, Cambridge</p>
+      </li>
+      
+      <li>
+        <p><strong>Refactoring Tool for F#</strong> (2013), BSc thesis, Lewis Brown, University of Cambridge</p>
+      </li>
+      
+      <li>
+        <p><strong>Type-safe Multilanguage Programming</strong> (2013), BSc thesis, Eduardo Muñoz, University of Cambridge</p>
+      </li>
+      
+      <li>
+        <p><strong>.NET Library for the MediaWiki API</strong> (2013), BSc thesis, Petr Onderka</p>
+      </li>
+      
+      <li>
+        <p><strong>IntelliSense Integration for Coq Theorem Prover</strong> (2012), MSc thesis, Adam Abonyi</p>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>Industry Engagement</h2>
+    <h3>Work Experience</h3>
+    <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <p><strong>Cofounder, fsharpWorks</strong>, February 2015 – present</p>
+        <p>I co-founded a consulting company focusing on the use of functional programming for data analytics
+and business application development. I designed and teach intensive two-day courses for professional
+programmers and consulted with Microsoft, Blue Mountain Capital Management and others.</p>
+      </li>
+      
+      
+      
+      
+      
+      <li>
+        <p><strong>Intern, BlueMountain Capital Management, New York</strong>, August 2013 – November 2013</p>
+        <p>Developed Deedle, an open-source data and time-series analytics library for .NET and integrated it into 
+existing codebase, replacing earlier technologies; the library has been adopted at BlueMountain and externally.</p>
+      </li>
+      
+      
+      
+      
+      
+      <li>
+        <p><strong>Research Intern, Microsoft Research, Cambridge</strong>, April 2007 – July 2007 and October 2008 – April 2009</p>
+        <p>Contributed to the development of F# tooling for Visual Studio, designed an F# language extension for
+parallel, asynchronous and concurrent programming and prototyped novel approach to multi-tier web development.</p>
+      </li>
+      
+      
+      
+      
+    </ul>
+  </section>
+
+  <section>
+    <h3>Selected Industry Talks</h3>
+    <ul class="condensed">
+      
+      
+      <li>
+        <p><strong>Popup from Hell: On the growing opacity of software systems</strong>, NewCraft Paris 2023</p>
+        <p>Talk recording: <a href="https://vimeo.com/842234359">https://vimeo.com/842234359</a></p>
+      </li>
+      
+      <li>
+        <p><strong>Designing composable functional libraries, not just for data visualization</strong>, NDC London (Virtual) 2021</p>
+        <p>Talk recording: <a href="https://youtu.be/o-HNxQ25pfg">https://youtu.be/o-HNxQ25pfg</a></p>
+      </li>
+      
+      <li>
+        <p><strong>The Search for Fundamental Software Engineering Principles</strong>, CurryOn! London 2019</p>
+        <p>Talk recording: <a href="https://youtu.be/wYMzMuBO_8M">https://youtu.be/wYMzMuBO_8M</a></p>
+      </li>
+      
+      <li>
+        <p><strong>Build your own Excel 365 in an hour with F#</strong>, NDC Oslo 2018</p>
+        <p>Talk recording: <a href="https://youtu.be/Bnm71YEt_lI">https://youtu.be/Bnm71YEt_lI</a></p>
+      </li>
+      
+      <li>
+        <p><strong>Rethinking compilers with live coding</strong>, Lambda World Seattle 2018</p>
+        <p>Talk recording: <a href="https://youtu.be/WSLWkKm7BTk">https://youtu.be/WSLWkKm7BTk</a></p>
+      </li>
+      
+      <li>
+        <p><strong>The Gamma: Towards open and reproducible data-driven storytelling</strong>, CogX London 2018</p>
+        <p>Talk recording: <a href="https://youtu.be/2KHR7-HSZJs">https://youtu.be/2KHR7-HSZJs</a></p>
+      </li>
+      
+      <li>
+        <p><strong>Would Aliens Understand Lambda Calculus</strong>, Code Mesh 2017</p>
+        <p>Talk recording: <a href="https://youtu.be/JoWH2jNlvQQ">https://youtu.be/JoWH2jNlvQQ</a></p>
       </li>
       
     </ul>

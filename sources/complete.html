@@ -18,24 +18,35 @@
       article { padding:0px; box-shadow: none ; }
     }
 
-    section { page-break-inside:avoid; break-inside:avoid; }
-
+    li { page-break-inside:avoid; break-inside:avoid; }
+    /* hack to avoid page break after: https://stackoverflow.com/questions/9238868 */
+    h2, h3 { break-inside:avoid; }
+    h2::after, h3::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
 
     h1 { font-weight:400; font-size:24pt; margin-bottom:2pt; }
-    h2 { font-weight:400; font-size:20pt; margin-bottom:6pt; }
-    h3 { font-weight:400; font-size:14pt; margin-bottom:4pt; }
-
+    h2 { font-weight:400; font-size:20pt; margin-bottom:8pt; margin-top:16pt; }
+    h3 { font-weight:400; font-size:14pt; margin-bottom:6pt; }
+    
     li, p { font-weight:300; font-size:12pt; line-height:1.3em;}
     a, a:visited { color:#2E75B5; text-decoration:none; }
+    li a { text-decoration:underline; }
     strong { font-weight:500; color:#2E75B5; }
     em { font-style:normal; color:#2E75B5; }
-
-    ul { margin-left:22px;}
+    
     li { list-style-type: square; }
-
-    li p { margin-bottom:3pt; }
+    
+    section > p { margin-bottom:6pt; }
+    ul { margin-left:22px; margin-bottom:10pt; }
+    
     li { margin-bottom:6pt; }
+    li p { margin-bottom:3pt; }
+    
+    ul.condensed li { margin-bottom:3pt; }
+    ul.condensed li p { margin-bottom:0pt; }
 
+    ul.semicondensed li { margin-bottom:6pt; }
+    ul.semicondensed li p { margin-bottom:0pt; }
+    
   </style>
 </head>
 
@@ -44,7 +55,7 @@
 
   <header>
     <h1>Tomas Petricek</h1>
-    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a></p>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
   </header>  
 
   <section>
@@ -78,11 +89,206 @@
   
   <section>
     <h3>Awards</h3>
-    <ul>
+    <ul class="condensed">
       {% assign awardsByYear = awards | sort:"year" | reverse %}
       {% for it in awardsByYear %}
       <li>
         <p><strong>{{ it.award }}</strong>{% if it.venue != "" %}, {{ it.venue }}{% endif %}. {{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Academic Collaboration and Recognition</h2>
+    <h3>Professional Membership</h3>
+    <ul class="semicondensed">
+      {% assign membershipsByStart = memberships | sort:"start" | reverse %}
+      {% for it in membershipsByStart %}
+      <li>
+        <p><strong>{{ it.organization }}</strong> ({{ it.range }}). {{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Project Participation</h3>
+    <ul class="semicondensed">
+      {% assign projectsByStart = projects | sort:"start" | reverse %}
+      {% for it in projectsByStart %}
+      <li>
+        <p><strong>{{ it.title }}</strong> (<em>{{ it.role }}</em>), {{ it.institution }} ({{ it.range }})</p>
+        <p>{{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+ 
+  <section>
+    <h3>Research Visits</h3>
+    <ul class="condensed">
+      {% assign visitsByYear = visits | sort:"year" | reverse %}
+      {% for it in visitsByYear %}
+      <li>
+        <p><strong>{{ it.institution }}</strong> ({{ it.date }}). {{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Keynotes and Invited Talks</h3>
+    <ul class="condensed">
+      {% assign invitedByYear = invited | sort:"year" | reverse %}
+      {% for it in invitedByYear %}
+      <li>
+        <p><strong>{{ it.venue }}</strong>, {{ it.location }} ({{ it.date }}).
+          <em>{{ it.kind }}</em>: {{ it.title }}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Community Service and Administration</h2>
+    <h3>Refereeing</h3>
+    <ul>
+      <li><p><strong>Program Committee Member.</strong>
+        {% assign pcByYear = reviewing.pc | sort:"year" | reverse %}
+        {% for it in pcByYear %}{{ it.venue }} {{ it.year }}{% unless forloop.last %}, {% endunless %}{% endfor %}      
+      </p></li>
+      <li><p><strong>Reviewer.</strong>
+        In the past, I also reviewed papers for
+        {% for it in reviewing.reviewer %}{{ it }}{% unless forloop.last %}, {% endunless %}{% endfor %}      
+      </p></li>
+      <li><p><strong>PhD Examiner.</strong>
+        I reviewed PhD theses completed at
+        {% assign phdByYear = reviewing.phd | sort:"year" | reverse %}
+        {% for it in phdByYear %}{{ it.institution }} ({{ it.year }}){% unless forloop.last %}, {% endunless %}{% endfor %}      
+      </p></li>
+      <li><p><strong>Grant Proposal Reviewer.</strong>
+        I reviewed grant proposals for
+        {% for it in reviewing.grant %}{{ it.name }} ({{ it.country }}){% unless forloop.last %}, {% endunless %}{% endfor %}      
+      </p></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Service</h3>
+    <ul class="condensed">
+      {% assign serviceByStart = service | sort:"start" | reverse %}
+      {% for it in serviceByStart %}
+      <li>
+        <p><strong>{{ it.role }}</strong>, {{ it.venue }}, {{ it.range }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Administration</h3>
+    <ul class="semicondensed">
+      {% assign adminByStart = admin | sort:"start" | reverse %}
+      {% for it in adminByStart %}
+      <li>
+        <p><strong>{{ it.role }}</strong>, {{ it.institution }}, {{ it.range }}</p>
+        <p>{{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Teaching and Supervision</h2>
+    <h3>Teaching Qualifications</h3>
+    <ul class="condensed">
+      {% assign experienceByStart = experience | sort:"start" | reverse %}
+      {% for it in experienceByStart %}
+      {% if it.kind contains "teaching" %}
+      <li>
+        <p><strong>{{ it.role }}</strong>, {{ it.institution }}, {{ it.range }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Research Supervision</h3>
+    <ul class="semicondensed">
+      {% assign superByStart = supervision | sort:"start" | reverse %}
+      {% for it in superByStart %}
+      <li>
+        <p><strong>{{ it.person }}</strong> ({{ it.role }}), {{ it.institution }}, {{ it.range }}</p>
+        <p>{{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Teaching Experience</h3>
+    <ul class="condensed">
+      {% assign teachByStart = teaching | sort:"year" | reverse %}
+      {% for it in teachByStart %}
+      <li>
+        <p><strong>{{ it.course }}</strong>, {{ it.institution }}, {{ it.range }}{% if it.label != "" %}, {{ it.label }}{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    {% assign advbs = advising | where:"kind","BSc" | size %}
+    {% assign advms = advising | where:"kind","MSc" | size %}
+    {% assign advbso = advising | where:"kind","BSc" | where:"year","ongoing" | size %}
+    {% assign advmso = advising | where:"kind","MSc" | where:"year","ongoing" | size %}
+    
+    <h3>Supervised Theses</h3>
+    <p>I supervised {{ advbs }} Bachelor's theses ({{ advbs | minus: advbso }} defended) and
+      {{ advms }} Master's theses ({{ advms | minus: advmso }} defended).
+      At University of Kent, I&nbsp;supervised students for a range of final year projects including
+      4 students in <em>Year in Computing Project (BSc)</em>,
+      25+ students for <em>Group Project (BSc)</em> and 
+      10 students for <em>Project and Dissertation (MSc)</em>.
+    </p>
+
+    <ul class="condensed">
+      {% assign advisingByYear = advising | sort:"year" | reverse %}
+      {% for it in advisingByYear %}
+      <li>
+        <p><strong>{{ it.title }}</strong> ({{ it.year }}), {{ it.kind }} thesis, {{ it.student }}{% if it.institution != "" %}, {{ it.institution }}{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Industry Engagement</h2>
+    <h3>Work Experience</h3>
+    <ul>
+      {% assign experienceByStart = experience | sort:"start" | reverse %}
+      {% for it in experienceByStart %}
+      {% if it.kind contains "work" %}
+      <li>
+        <p><strong>{{ it.role }}, {{ it.institution }}</strong>, {{ it.range }}</p>
+        <p>{{ it.label }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Selected Industry Talks</h3>
+    <ul class="condensed">
+      {% assign talksByYear = talks | sort:"year" | reverse %}
+      {% for it in talksByYear %}
+      <li>
+        <p><strong>{{ it.title }}</strong>, {{ it.venue }} {{ it.year }}</p>
+        <p>Talk recording: {{ it.link }}</p>
       </li>
       {% endfor %}
     </ul>
