@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomas Petricek's CV</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">  
+  <style type="text/css">
+    * { padding:0px; margin:0px; font-family:'Roboto', sans-serif; }
+    body { background-color:#f0f0f0; }
+    article { width:8.3in; background-color:white; margin:0.25in auto 0.25in auto; padding:0.5in; box-shadow: 0px 0px 10px #c0c0c0; }
+    header { text-align:center; margin-bottom:24pt;}
+    @media print {
+      article { padding:0px; box-shadow: none ; }
+    }
+
+    section { page-break-inside:avoid; break-inside:avoid; }
+
+
+    h1 { font-weight:400; font-size:24pt; margin-bottom:2pt; }
+    h2 { font-weight:400; font-size:20pt; margin-bottom:6pt; }
+    h3 { font-weight:400; font-size:14pt; margin-bottom:4pt; }
+
+    li, p { font-weight:300; font-size:12pt; line-height:1.3em;}
+    a, a:visited { color:#2E75B5; text-decoration:none; }
+    strong { font-weight:500; color:#2E75B5; }
+    em { font-style:normal; color:#2E75B5; }
+
+    ul { margin-left:22px;}
+    li { list-style-type: square; }
+
+    li p { margin-bottom:3pt; }
+    li { margin-bottom:6pt; }
+
+  </style>
+</head>
+
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a></p>
+  </header>  
+
+  <section>
+    <h2>Academic Experience</h2>
+    <h3>Education and Positions</h3>
+    <ul>
+      {% assign experienceByStart = experience | sort:"start" | reverse %}
+      {% for it in experienceByStart %}
+      {% if it.kind contains "academic" or it.kind contains "education" %}
+      <li>
+        <p><strong>{{ it.role }}, {{ it.institution }}</strong>, {{ it.range }}</p>
+        <p>{{ it.label }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Research Funding</h3>
+    <ul>
+      {% assign fundingByStart = funding | sort:"start" | reverse %}
+      {% for it in fundingByStart %}
+      <li>
+        <p><strong>{{ it.grant }}, {{ it.institution }}</strong>, {{ it.range }}</p>
+        <p>{{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  
+  <section>
+    <h3>Awards</h3>
+    <ul>
+      {% assign awardsByYear = awards | sort:"year" | reverse %}
+      {% for it in awardsByYear %}
+      <li>
+        <p><strong>{{ it.award }}</strong>{% if it.venue != "" %}, {{ it.venue }}{% endif %}. {{ it.label }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</article>
+</body>
+</html>
