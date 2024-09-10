@@ -106,13 +106,13 @@ let doit () =
     options.MemberAccessStrategy.Register(t)
 
   let parser = FluidParser()
-  Directory.CreateDirectory(__SOURCE_DIRECTORY__ @ "output") |> ignore
+  Directory.CreateDirectory(__SOURCE_DIRECTORY__ @ "docs") |> ignore
   for f in Directory.GetFiles(__SOURCE_DIRECTORY__ @ "sources") do  
     let src = File.ReadAllText(f)
     let templ = parser.Parse(src) 
     let ctx = new TemplateContext(model, options)
     let out = templ.Render(ctx)
-    File.WriteAllText(__SOURCE_DIRECTORY__ @ "output" @ Path.GetFileName(f), out)
+    File.WriteAllText(__SOURCE_DIRECTORY__ @ "docs" @ Path.GetFileName(f), out)
 
 doit ()
 
