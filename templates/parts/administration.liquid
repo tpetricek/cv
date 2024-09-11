@@ -1,0 +1,10 @@
+<h3>Administration</h3>
+<ul class="semicondensed">
+  {% assign admin_by_start = admin | sort:"start" | reverse %}
+  {% for it in admin_by_start %}
+  <li>
+    <p><strong>{{ it.role }}</strong>, {{ it.institution }}, {{ it.range }}</p>
+    <p>{{ it.label }}</p>
+  </li>
+  {% endfor %}
+</ul>

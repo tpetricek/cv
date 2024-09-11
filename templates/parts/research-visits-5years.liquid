@@ -1,0 +1,12 @@
+<h3>Recent Research Visits</h3>
+{% assign first_year = "now" | date: "%Y" | minus: 5 %}
+<ul class="condensed">
+  {% assign visits_by_year = visits | sort:"year" | reverse %}
+  {% for it in visits_by_year %}
+  {% if it.year >= first_year %}
+  <li>
+    <p><strong>{{ it.institution }}</strong> ({{ it.date }}). {{ it.label }}</p>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

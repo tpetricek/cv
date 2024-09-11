@@ -1,0 +1,21 @@
+<h3>Refereeing</h3>
+<ul>
+  <li><p><strong>Program Committee Member.</strong>
+    Total {{ reviewing.pc | size }} memberships including
+    {% assign pc_by_year = reviewing.pc | where:"highlight","*" | sort:"year" | reverse %}
+    {% for it in pc_by_year %}{{ it.venue }} {{ it.year }}{% unless forloop.last %}, {% endunless %}{% endfor %}      
+  </p></li>
+  <li><p><strong>Reviewer.</strong>
+    In the past, I also reviewed papers for
+    {% for it in reviewing.reviewer %}{{ it }}{% unless forloop.last %}, {% endunless %}{% endfor %}      
+  </p></li>
+  <li><p><strong>PhD Examiner.</strong>
+    I reviewed PhD theses completed at
+    {% assign phd_by_year = reviewing.phd | sort:"year" | reverse %}
+    {% for it in phd_by_year %}{{ it.institution }} ({{ it.year }}){% unless forloop.last %}, {% endunless %}{% endfor %}      
+  </p></li>
+  <li><p><strong>Grant Proposal Reviewer.</strong>
+    I reviewed grant proposals for
+    {% for it in reviewing.grant %}{{ it.name }} ({{ it.country }}){% unless forloop.last %}, {% endunless %}{% endfor %}      
+  </p></li>
+</ul>

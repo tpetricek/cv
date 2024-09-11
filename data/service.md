@@ -2,36 +2,35 @@
 
 ## [Program Committee Member](#pc)
 
-* OOPSLA, 2024
-* Onward!, 2024
+* OOPSLA, 2024, *
+* Onward!, 2024, *
 * Onward! Essays, 2024
 * PX, 2024
 * Undone CS, 2024
-* OOPSLA, 2023
-* PAINT, 2023
-* Programming, 2023
-* Onward! Essays, 2023
-* PAINT, 2023
-* ECOOP, 2023
-* PX, 2023
-* Programming, 2022
-* PX, 2022
-* ECOOP, 2022
-* PADL, 2022
+* OOPSLA, 2023, *
+* PAINT, 2023, *
+* Programming, 2023, *
+* Onward! Essays, 2023, *
+* ECOOP, 2023, *
+* PX, 2023, *
+* Programming, 2022, *
+* PX, 2022, *
+* ECOOP, 2022, *
+* PADL, 2022, *
 * HaPoP, 2022
-* ProWeb, 2022
-* AutoDS, 2021
-* Onward! Essays, 2021
-* Programming, 2021
-* HOPL IV, 2021
+* ProWeb, 2022, *
+* AutoDS, 2021, *
+* Onward! Essays, 2021, *
+* Programming, 2021, *
+* HOPL IV, 2021, *
 * ProWeb, 2020
-* LIVE, 2020
+* LIVE, 2020, *
 * SdR, 2020
-* PX, 2020
-* LIVE, 2019
+* PX, 2020, *
+* LIVE, 2019, *
 * HFM, 2019
-* Onward! Essays, 2019
-* HaPoC, 2019
+* Onward! Essays, 2019, *
+* HaPoC, 2019, *
 * SdR, 2019
 * DSJM, 2018
 * SdR, 2019
@@ -41,9 +40,9 @@
 * HaPoC, 2017
 * OBT, 2017
 * TyDe, 2016
-* TFP, 2015
+* TFP, 2015, *
 * ML, 2013
-* ISMM, 2012
+* ISMM, 2012, *
 * CUFP, 2012
   
 ## [Reviewer](#reviewer)
@@ -62,7 +61,7 @@
 * ICFP
 * IEEE Access
 * POPL
-* Journal of Logic and Algebraic Methods in Programming
+* JLAMP 
 * PLACES
 * TFP 
 * PPDP
@@ -81,7 +80,7 @@
 
 * GAUK, Czechia
 * FONDECYT, Chile
-* The Alan Turing Institute, UK
+* The&nbsp;Alan&nbsp;Turing&nbsp;Institute, UK
 * EPSRC, UK
 * ISF, Israel
 

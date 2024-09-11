@@ -1,0 +1,9 @@
+<h3>Research Visits</h3>
+<ul class="condensed">
+  {% assign visits_by_year = visits | sort:"year" | reverse %}
+  {% for it in visits_by_year %}
+  <li>
+    <p><strong>{{ it.institution }}</strong> ({{ it.date }}). {{ it.label }}</p>
+  </li>
+  {% endfor %}
+</ul>

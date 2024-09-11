@@ -4,4 +4,5 @@ source https://api.nuget.org/v3/index.json
 storage: packages
 nuget FSharp.Formatting
 nuget Fluid.Core
+nuget Microsoft.Extensions.FileProviders.Physical
 nuget Suave

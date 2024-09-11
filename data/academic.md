@@ -4,7 +4,7 @@
   - institution: Charles University
   - range: 2024 – 2028
   - start: 2024
-  - label: Awarded €610,000 for research on types for data-centric programming to cover 60% FTE of 
+  - label: Awarded €610,000 for research on *Types for data-centric programming* to cover 60% FTE of 
       my time, two post-docs for 24 months each and 2 PhD students for the duration of the project. 
 
 * Dstl & GCHQ grants
@@ -18,7 +18,7 @@
   - institution: Google Digital News Initiative
   - range: 2016
   - start: 2016
-  - label: Awarded €50,000 for research on programming tools for data journalism. My proposal was selected as one 
+  - label: Awarded €50,000 for research on *Programming tools for data journalism*. My proposal was selected as one 
       of 128 out of 1,200 and allowed me to develop an independent research project at The Alan Turing Institute.
 
 * Fellowship

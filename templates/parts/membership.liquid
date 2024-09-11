@@ -1,0 +1,9 @@
+<h3>Professional Membership</h3>
+<ul class="semicondensed">
+  {% assign memberships_by_start = memberships | sort:"start" | reverse %}
+  {% for it in memberships_by_start %}
+  <li>
+    <p><strong>{{ it.organization }}</strong> ({{ it.range }}). {{ it.label }}</p>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+<h3>Teaching Experience</h3>
+<ul class="condensed">
+  {% assign teach_by_start = teaching | sort:"year" | reverse %}
+  {% for it in teach_by_start %}
+  <li>
+    <p><strong>{{ it.course }}</strong>, {{ it.institution }}, {{ it.range }}{% if it.label != "" %}, {{ it.label }}{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>

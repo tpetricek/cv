@@ -1,11 +1,13 @@
 #load ".paket/load/netstandard2.1/Fluid.Core.fsx"
 #r "packages/FSharp.Formatting/lib/netstandard2.1/FSharp.Formatting.Common.dll"
 #r "packages/FSharp.Formatting/lib/netstandard2.1/FSharp.Formatting.Markdown.dll"
+#r "packages/Microsoft.Extensions.FileProviders.Physical/lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll"
 open System
 open System.IO
 open FSharp.Formatting.Markdown
 open Fluid
 open Microsoft.FSharp.Reflection
+open Microsoft.Extensions.FileProviders
 
 // --------------------------------------------------------------------------------------
 // Data
@@ -58,7 +60,7 @@ type Project =
 type Talk = 
   { title : string; venue : string; year : int; link : string; }
 
-type PC = { venue : string; year : int }
+type PC = { venue : string; year : int; highlight : string }
 type PhD = { institution : string; year : int }
 type Grant = { name : string; country : string }
 
@@ -155,7 +157,9 @@ let readInlineRecords<'T> (ps:string list) sec pars =
   let maker = makeRecord<'T>()
   [ for s in items ->
       match s.Split([|','|], StringSplitOptions.TrimEntries) with 
-      | kvps when kvps.Length = ps.Length -> Seq.zip ps kvps |> dict |> maker
+      | kvps when kvps.Length <= ps.Length -> 
+          let kvps = Array.append kvps (Array.create (ps.Length - kvps.Length) "")
+          Seq.zip ps kvps |> dict |> maker
       | _ -> failwith $"readKvpList: Cannot split item: {s}. Expected {ps.Length} items." ]
 
 // --------------------------------------------------------------------------------------
@@ -177,7 +181,7 @@ let doit () =
         { reviewer = readSimpleList "#reviewer" pars
           phd = readInlineRecords<PhD> ["institution"; "year"] "#phd" pars
           grant = readInlineRecords<Grant> ["name"; "country"] "#grant" pars
-          pc = readInlineRecords<PC> ["venue"; "year"] "#pc" pars }
+          pc = readInlineRecords<PC> ["venue"; "year"; "highlight"] "#pc" pars }
       service = readRecords<Service> "role" "#service" pars
       admin = readRecords<Admin> "role" "#admin" pars
       supervision = readRecords<Supervision> "person" "#supervision" pars
@@ -190,6 +194,7 @@ let doit () =
       talks = readRecords<Talk> "title" "#talks" pars
     }
   let options = TemplateOptions()
+  options.FileProvider <- new PhysicalFileProvider(__SOURCE_DIRECTORY__ @ "templates");
 
   let rec allTypes ty = seq {
     if FSharpType.IsRecord(ty) then 
@@ -203,13 +208,21 @@ let doit () =
     options.MemberAccessStrategy.Register(t)
 
   let parser = FluidParser()
-  Directory.CreateDirectory(__SOURCE_DIRECTORY__ @ "docs") |> ignore
-  for f in Directory.GetFiles(__SOURCE_DIRECTORY__ @ "sources") do  
-    let src = File.ReadAllText(f)
-    let templ = parser.Parse(src) 
-    let ctx = new TemplateContext(model, options)
-    let out = templ.Render(ctx)
-    File.WriteAllText(__SOURCE_DIRECTORY__ @ "docs" @ Path.GetFileName(f), out)
+  
+  let sources = __SOURCE_DIRECTORY__ @ "sources"
+  let rec collectDirs dir = seq {
+    yield dir
+    for sub in Directory.GetDirectories(dir) do yield! collectDirs sub }
+  let dirs = collectDirs sources
+
+  for sourceDir in dirs do
+    Directory.CreateDirectory(sourceDir.Replace("sources", "docs")) |> ignore
+    for f in Directory.GetFiles(sourceDir) do  
+      let src = File.ReadAllText(f)
+      let templ = parser.Parse(src) 
+      let ctx = new TemplateContext(model, options)
+      let out = templ.Render(ctx)
+      File.WriteAllText(f.Replace("sources", "docs"), out)
 
 doit ()
 
@@ -232,10 +245,12 @@ let watch dir op =
       cprint ConsoleColor.Red "[ERROR] %s" e.Message
 
   let fsw = new FileSystemWatcher(dir)
+  fsw.IncludeSubdirectories <- true
   fsw.NotifyFilter <- NotifyFilters.LastWrite
   fsw.Changed.Add(fun e -> update())
   fsw.EnableRaisingEvents <- true
   fsw
 
-let f1 = watch (__SOURCE_DIRECTORY__ @ "sources") doit
-let f2 = watch (__SOURCE_DIRECTORY__ @ "data") doit
+let f1 = watch (__SOURCE_DIRECTORY__ @ "templates") doit
+let f2 = watch (__SOURCE_DIRECTORY__ @ "sources") doit
+let f3 = watch (__SOURCE_DIRECTORY__ @ "data") doit

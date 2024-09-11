@@ -1,0 +1,10 @@
+<h3>Research Funding</h3>
+<ul>
+  {% assign funding_by_start = funding | sort:"start" | reverse %}
+  {% for it in funding_by_start %}
+  <li>
+    <p><strong>{{ it.grant }}, {{ it.institution }}</strong>, {{ it.range }}</p>
+    <p>{{ it.label }}</p>
+  </li>
+  {% endfor %}
+</ul>

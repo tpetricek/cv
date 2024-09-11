@@ -1,0 +1,11 @@
+<h3>Teaching Qualifications</h3>
+<ul class="condensed">
+  {% assign experience_by_start = experience | sort:"start" | reverse %}
+  {% for it in experience_by_start %}
+  {% if it.kind contains "teaching" %}
+  <li>
+    <p><strong>{{ it.role }}</strong>, {{ it.institution }}, {{ it.range }}</p>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

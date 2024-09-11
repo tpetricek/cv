@@ -1,0 +1,10 @@
+<h3>Research Supervision</h3>
+<ul class="semicondensed">
+  {% assign super_by_start = supervision | sort:"start" | reverse %}
+  {% for it in super_by_start %}
+  <li>
+    <p><strong>{{ it.person }}</strong> ({{ it.role }}), {{ it.institution }}, {{ it.range }}</p>
+    <p>{{ it.label }}</p>
+  </li>
+  {% endfor %}
+</ul>

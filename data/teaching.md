@@ -5,7 +5,8 @@
   - institution: The Alan Turing Institute
   - range: 2019
   - start: 2019
-  - label: Program change tracking with applications in AI research. Now Early Career Advanced 
+  - label: Program change tracking with applications in AI research. Now  at *University of Cambridge*.
+  - label-long: Program change tracking with applications in AI research. Now Early Career Advanced 
       Fellow, Institute of Computing for Climate Science, *University of Cambridge*.
 
 * Joel Jakubovic

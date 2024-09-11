@@ -1,0 +1,11 @@
+<h3>Keynotes and Invited Talks</h3>
+<ul class="condensed">
+  {% assign invited_by_year = invited | sort:"year" | reverse %}
+  {% for it in invited_by_year %}
+  <li>
+    <p><strong>{{ it.venue }}</strong>, {{ it.location }} ({{ it.date }}).
+      <em>{{ it.kind }}</em>: {{ it.title }}
+    </p>
+  </li>
+  {% endfor %}
+</ul>

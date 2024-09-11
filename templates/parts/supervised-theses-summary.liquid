@@ -1,0 +1,24 @@
+{% assign advbs = advising | where:"kind","BSc" | size %}
+{% assign advms = advising | where:"kind","MSc" | size %}
+{% assign advbso = advising | where:"kind","BSc" | where:"year","ongoing" | size %}
+{% assign advmso = advising | where:"kind","MSc" | where:"year","ongoing" | size %}
+
+<h3>Supervised Theses</h3>
+<ul class="condensed">
+  <li><p><strong>Charles University</strong> (2023 – present).
+  {{ advbs | minus: advbso }} <em>Bachelor's theses</em> (defended 2024),
+  {{ advms | minus: advmso }} <em>Master's theses</em> (defended 2024).
+</p></li>
+  <li><p><strong>University of Kent</strong> (2018 – 2022).
+  Supervised final year projects including
+  4 students in <em>Year in Computing Project (BSc)</em>,
+  25+ students for <em>Group Project (BSc)</em> and 
+  10 students for <em>Project and Dissertation (MSc)</em>.
+</p></li>
+  <li><p><strong>Cambridge University</strong> (2013). 
+    Supervised 3 final <em>Part II Project Dissertations</em> (defended 2013).</p></li>
+  <li><p><strong>Charles University</strong> (2012, 2013). 
+    1 <em>Master's thesis</em> (defended 2013) and 
+    1 <em>Bachelor's thesis</em> (defended 2012).</p></li>
+</ul>
+

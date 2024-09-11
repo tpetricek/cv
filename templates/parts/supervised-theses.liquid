@@ -1,0 +1,22 @@
+{% assign advbs = advising | where:"kind","BSc" | size %}
+{% assign advms = advising | where:"kind","MSc" | size %}
+{% assign advbso = advising | where:"kind","BSc" | where:"year","ongoing" | size %}
+{% assign advmso = advising | where:"kind","MSc" | where:"year","ongoing" | size %}
+
+<h3>Supervised Theses</h3>
+<p>I supervised {{ advbs }} Bachelor's theses ({{ advbs | minus: advbso }} defended) and
+  {{ advms }} Master's theses ({{ advms | minus: advmso }} defended).
+  At University of Kent, I&nbsp;supervised students for a range of final year projects including
+  4 students in <em>Year in Computing Project (BSc)</em>,
+  25+ students for <em>Group Project (BSc)</em> and 
+  10 students for <em>Project and Dissertation (MSc)</em>.
+</p>
+
+<ul class="condensed">
+  {% assign advising_by_year = advising | sort:"year" | reverse %}
+  {% for it in advising_by_year %}
+  <li>
+    <p><strong>{{ it.title }}</strong> ({{ it.year }}), {{ it.kind }} thesis, {{ it.student }}{% if it.institution != "" %}, {{ it.institution }}{% endif %}</p>
+  </li>
+  {% endfor %}
+</ul>

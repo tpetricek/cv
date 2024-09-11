@@ -1,0 +1,10 @@
+<h3>Project Participation</h3>
+<ul class="semicondensed">
+  {% assign projects_by_start = projects | sort:"start" | reverse %}
+  {% for it in projects_by_start %}
+  <li>
+    <p><strong>{{ it.title }}</strong> (<em>{{ it.role }}</em>), {{ it.institution }} ({{ it.range }})</p>
+    <p>{{ it.label }}</p>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+<h3>Service</h3>
+<ul class="condensed">
+  {% assign service_by_start = service | sort:"start" | reverse %}
+  {% for it in service_by_start %}
+  <li>
+    <p><strong>{{ it.role }}</strong>, {{ it.venue }}, {{ it.range }}</p>
+  </li>
+  {% endfor %}
+</ul>
