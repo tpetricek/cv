@@ -60,6 +60,10 @@ type Project =
 type Talk = 
   { title : string; venue : string; year : int; link : string; }
 
+type Publication =
+  { title : string; venue : string; year : int; authors : string; ``type`` : string; ``if`` : string
+    hdl : string; arxiv : string; url : string; doi: string; isbn: string; comment: string; }
+
 type PC = { venue : string; year : int; highlight : string }
 type PhD = { institution : string; year : int }
 type Grant = { name : string; country : string }
@@ -85,6 +89,7 @@ type Data =
     projects : Project list
     memberships : Membership list
     talks : Talk list
+    publications : Publication list
     }
 
 // --------------------------------------------------------------------------------------
@@ -170,6 +175,7 @@ let (@) p1 p2 = Path.Combine(p1, p2)
 let data = __SOURCE_DIRECTORY__ @ "data"
 
 let doit () =
+  cprint ConsoleColor.DarkGray "Updating documents"
   let pars = 
     [ for f in Directory.GetFiles(data) do
         yield! Markdown.Parse(File.ReadAllText(f)).Paragraphs ]
@@ -192,6 +198,7 @@ let doit () =
       projects = readRecords<Project> "title" "#projects" pars
       memberships = readRecords<Membership> "organization" "#memberships" pars
       talks = readRecords<Talk> "title" "#talks" pars
+      publications = readRecords<Publication> "title" "#pubs" pars
     }
   let options = TemplateOptions()
   options.FileProvider <- new PhysicalFileProvider(__SOURCE_DIRECTORY__ @ "templates");
@@ -222,7 +229,10 @@ let doit () =
       let templ = parser.Parse(src) 
       let ctx = new TemplateContext(model, options)
       let out = templ.Render(ctx)
-      File.WriteAllText(f.Replace("sources", "docs"), out)
+      let outf = f.Replace("sources", "docs")
+      File.WriteAllText(outf, out)
+      cprint ConsoleColor.DarkGray "Processed: %s" outf
+  cprint ConsoleColor.Green "Update completed"
 
 doit ()
 
@@ -233,16 +243,14 @@ doit ()
 let watch dir op = 
   let rec update () =
     try
-      cprint ConsoleColor.White "[INFO] Updating documents"
       op()
-      cprint ConsoleColor.White "[INFO] Update completed"
     with 
     | e when e.Message.Contains("process cannot access the file") ->
       System.Threading.Thread.Sleep(100)
-      cprint ConsoleColor.White "[INFO] Retrying..."
+      cprint ConsoleColor.DarkYellow "Cannot access a file, retrying..."
       update()
     | e -> 
-      cprint ConsoleColor.Red "[ERROR] %s" e.Message
+      cprint ConsoleColor.Red "Error occurred: %s" e.Message
 
   let fsw = new FileSystemWatcher(dir)
   fsw.IncludeSubdirectories <- true
@@ -254,3 +262,6 @@ let watch dir op =
 let f1 = watch (__SOURCE_DIRECTORY__ @ "templates") doit
 let f2 = watch (__SOURCE_DIRECTORY__ @ "sources") doit
 let f3 = watch (__SOURCE_DIRECTORY__ @ "data") doit
+
+cprint ConsoleColor.Green "Waiting for edits, press any key to stop"
+Console.ReadKey() |> ignore

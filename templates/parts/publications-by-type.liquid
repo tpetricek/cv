@@ -1,0 +1,16 @@
+<ul class="spacious">
+  {% assign pubs_by_start = publications | sort:"year" | reverse %}
+  {% for it in pubs_by_start %}
+  {% if it.type contains pubtype %}
+  <li>
+    <p>{{ it.authors }}. <em>{{ it.title }}</em>. {{ it.venue }}{% if it.if != "" %} (IF:&nbsp;{{ it.if }}){% endif %}, 
+      {% if it.doi != "" %}<a href="https://doi.org/{{ it.doi }}">{{ it.doi }}</a>,{% endif %} 
+      {% if it.hdl != "" %}<a href="http://hdl.handle.net/{{ it.hdl }}">hdl:{{ it.hdl }}</a>,{% endif %} 
+      {% if it.arxiv != "" %}<a href="https://arxiv.org/abs/{{ it.arxiv }}">arXiv:{{ it.arxiv }}</a>,{% endif %} 
+      {% if it.isbn != "" %}ISBN {{ it.isbn }},{% endif %} 
+      {{ it.year }}</p>
+    {% if it.comment != "" %}<p>{{ it.comment }}</p>{% endif %} 
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek - Publications</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek - Publications</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
+  </header>  
+
+  <section>
+    <h2>Publications</h2>
+    <h3>Papers in Highly Selective Conferences and Journals</h3>
+    {% assign pubtype = "journal" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>Academic Monographs</h3>
+    {% assign pubtype = "monograph" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>Books and Tutorial Publications</h3>
+    {% assign pubtype = "tutorial" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>Further Conferences and Workshop Proceedings</h3>
+    {% assign pubtype = "workshop" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>Editorial Work and Reviews</h3>
+    {% assign pubtype = "editorial" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+</article>
+</body>
+</html>
+ 
+  

@@ -1,3 +1,4 @@
 .paket/load
+.paket/Paket.Restore.targets
 packages/
 paket-files/

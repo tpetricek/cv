@@ -5,4 +5,5 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 
 ## Various CVs
 
-* [Complete CV](https://tpetricek.github.io/cv/complete.html) with (almost) everything in it
+* [Complete version](https://tpetricek.github.io/cv/complete.html) with everything in it
+* [Publications list](https://tpetricek.github.io/cv/publications.html) with everything in it
