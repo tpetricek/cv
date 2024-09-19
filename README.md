@@ -11,7 +11,7 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 ## Various CVs
 
 * [Complete version](https://tpetricek.github.io/cv/complete.html) - ~5 page version with everything but not publications
-* [Brief version](https://tpetricek.github.io/cv/complete.html) - ~3 page version focused on teaching and academic service
+* [Brief version](https://tpetricek.github.io/cv/brief.html) - ~3 page version focused on teaching and academic service
 * [Publications list](https://tpetricek.github.io/cv/publications.html) - all the publications
 
 ## Habilitation materials
