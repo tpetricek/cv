@@ -17,5 +17,5 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 
 * [Professional highlights](https://tpetricek.github.io/cv/habilitation/highlights.html) ([PDF](https://tpetricek.github.io/cv/habilitation/highlights.pdf))
 * [Curriculum vitae](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
-* [List of publications](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
-* [Citation report](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
+* [List of publications](https://tpetricek.github.io/cv/habilitation/publications.html) ([PDF](https://tpetricek.github.io/cv/habilitation/habilitation.pdf))
+* [Citation report](https://tpetricek.github.io/cv/habilitation/citations.html) ([PDF](https://tpetricek.github.io/cv/habilitation/citations.pdf))
