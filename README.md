@@ -15,6 +15,7 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 
 ## Habilitation materials
 
+* [Habilitation materials](https://tpetricek.github.io/cv/habilitation/)
 * [Professional highlights](https://tpetricek.github.io/cv/habilitation/highlights.html) ([PDF](https://tpetricek.github.io/cv/habilitation/highlights.pdf))
 * [Curriculum vitae](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
 * [List of publications](https://tpetricek.github.io/cv/habilitation/publications.html) ([PDF](https://tpetricek.github.io/cv/habilitation/habilitation.pdf))
