@@ -5,7 +5,7 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 
 * [`data`](https://github.com/tpetricek/cv/tree/master/data) contains various Markdown files with various academic things that one may have on their CV. The `build.fsx` script reads this and parses it a nice F# [domain model](https://github.com/tpetricek/cv/blob/master/build.fsx#L13).
 * [`sources`](https://github.com/tpetricek/cv/tree/master/sources) contains Liquid template, processed using the [fluid package](https://github.com/sebastienros/fluid).
-* CV templates can easily include various components from the [`templates`](https://github.com/tpetricek/cv/tree/master/templates) so you never ever have to copy paste things!
+* CV templates can easily include various components from the [`templates`](https://github.com/tpetricek/cv/tree/master/templates) so you never ever have to copy paste!
 * There is some [fine-tuned CSS](https://github.com/tpetricek/cv/blob/master/templates/styles/default.liquid) that displays the CV nicely and hopefully makes it print nicely(ish) too.
  
 ## Various CVs
