@@ -1,0 +1,11 @@
+<ul>
+  {% assign experience_by_start = experience | sort:"start" | reverse %}
+  {% for it in experience_by_start %}
+  {% if it.kind contains expkind %}
+  <li>
+    <p><strong>{{ it.role }}, {{ it.institution }}</strong>, {{ it.range }}</p>
+    <p>{{ it.label }}</p>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

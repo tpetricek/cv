@@ -1,0 +1,14 @@
+<h3>Project Funding</h3>
+<ul>
+  {% assign funding_by_start = funding | sort:"start" | reverse %}
+  {% for it in funding_by_start %}
+  {% if it.start > 2010 %}
+  <li>
+    <p><strong>{{ it.grant }}, {{ it.institution }}</strong>{% if it.role != "" %}
+      (<em>{{ it.role }}</em>){% endif %},
+    {{ it.range }}</p>
+    <p>{{ it.label }}</p>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

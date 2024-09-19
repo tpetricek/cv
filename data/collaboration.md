@@ -15,7 +15,7 @@
   - year: 2022
   - label: Remote talk at the *Programming Systems* seminar
 
-* Aarhus University 
+* Aarhus University
   - date: May 2022
   - year: 2022
   - label: Two-day visit, collaboration on programming systems research
@@ -25,7 +25,7 @@
   - year: 2021
   - label: Remote invited talk on data exploration tools
 
-* MIT SDG 
+* MIT SDG
   - date: April 2021
   - year: 2021
   - label: Remote invited talk on programming as architecture and urban planning
@@ -50,7 +50,7 @@
   - year: 2018
   - label: One-day visit, talk on programming as human-data interaction
 
-* University of Glasgow 
+* University of Glasgow
   - date: May 2019
   - year: 2019
   - label: One-day visit, talk on data-rich programming languages
@@ -95,7 +95,7 @@
   - year: 2017
   - kind: Keynote
   - location: Prague
-  
+
 * Data Science Summit
   - title: The Gamma: Democratizing data science
   - date: June 2017
@@ -128,7 +128,7 @@
   - kind: Invited Talk
   - date: July 2022
   - year: 2022
-  - title: Rethinking data exploration tools 
+  - title: Rethinking data exploration tools
   - location: Edinburgh
 
 
@@ -138,8 +138,8 @@
   - range: 2016 – 2018
   - start: 2016
   - institution: The Alan Turing Institute
-  - role: Member
-  - label: Reshaped the project to allow integration of work by 3 post-docs and 1 PhD student.
+  - role: Co-Investigator
+  - label: Joined and reshaped the project to allow integration of work by 3 post-docs and 1 PhD student.
 
 * ExtremeXP
   - range: 2023 – present
@@ -149,14 +149,14 @@
   - label: Contributing to the design of novel data visualization tools and gamification systems.
 
 * PROGRAMme: What is a computer program?
-  - range: 2017 – present 
+  - range: 2017 – present
   - start: 2017
   - institution: ANR France
   - role: Member
   - label: Interdisciplinary collaborative project, serving as co-editor for the resulting work-in-progress book.
 
 * Language, Picture, Gesture: Forms of Discursivity
-  - range: 2024 – present 
+  - range: 2024 – present
   - start: 2024
   - institution: UNCE, MFF UK
   - role: Junior Researcher
@@ -164,7 +164,7 @@
 
 # [Industry talks](#talks)
 
-* Popup from Hell: On the growing opacity of software systems 
+* Popup from Hell: On the growing opacity of software systems
   - venue: NewCraft Paris
   - year: 2023
   - link: https://vimeo.com/842234359
@@ -175,27 +175,27 @@
   - link: https://youtu.be/wYMzMuBO_8M
 
 * Would Aliens Understand Lambda Calculus
-  - venue: Code Mesh 
+  - venue: Code Mesh
   - year: 2017
   - link: https://youtu.be/JoWH2jNlvQQ
 
-* Designing composable functional libraries, not just for data visualization 
+* Designing composable functional libraries, not just for data visualization
   - venue: NDC London (Virtual)
   - year: 2021
   - link: https://youtu.be/o-HNxQ25pfg
 
-* The Gamma: Towards open and reproducible data-driven storytelling 
+* The Gamma: Towards open and reproducible data-driven storytelling
   - venue: CogX London
   - year: 2018
   - link: https://youtu.be/2KHR7-HSZJs
 
-* Rethinking compilers with live coding 
-  - venue: Lambda World Seattle 
+* Rethinking compilers with live coding
+  - venue: Lambda World Seattle
   - year: 2018
   - link: https://youtu.be/WSLWkKm7BTk
 
 * Build your own Excel 365 in an hour with F#
-  - venue: NDC Oslo 
+  - venue: NDC Oslo
   - year: 2018
   - link: https://youtu.be/Bnm71YEt_lI
 

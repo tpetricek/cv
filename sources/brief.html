@@ -14,32 +14,39 @@
 
   <section>
     <h2>Academic Experience</h2>
-    {% include "parts/experience-academic" %}
-  </section>
-  <section>
-    {% include "parts/research-funding" %}
-  </section>
-  <section>
-    {% include "parts/awards" %}
+    <h3>Positions</h3>
+    {% assign expkind = "academic" %}
+    {% include "parts/experience-by-kind" %}
+    <h3>Education</h3>
+    {% assign expkind = "education" %}
+    {% include "parts/experience-by-kind" %}
   </section>
 
   <section>
-    <h2>Academic Recognition and Collaboration</h2>
+    <h2>Academic Recognition</h2>
     {% include "parts/membership" %}
   </section>
   <section>
     {% include "parts/invited-talks" %}
   </section>
   <section>
-    {% include "parts/research-visits" %}
+    {% include "parts/awards" %}
+  </section>
+
+  <section>
+    <h2>Teaching and Supervision</h2>
+    {% include "parts/research-supervision" %}
   </section>
   <section>
-    {% include "parts/projects" %}
+    {% include "parts/teaching-experience" %}
+  </section>
+  <section>
+    {% include "parts/supervised-theses-summary" %}
   </section>
 
   <section>
     <h2>Community Service and Administration</h2>
-    {% include "parts/refereeing" %}
+    {% include "parts/refereeing-selected" %}
   </section>
   <section>
     {% include "parts/service" %}
@@ -48,27 +55,6 @@
     {% include "parts/administration" %}
   </section>
 
-  <section>
-    <h2>Teaching and Supervision</h2>
-    {% include "parts/teaching-qualifications" %}
-  </section>
-  <section>
-    {% include "parts/research-supervision" %}
-  </section>
-  <section>
-    {% include "parts/teaching-experience" %}
-  </section>
-  <section>
-    {% include "parts/supervised-theses" %}
-  </section>
-
-  <section>
-    <h2>Industry Engagement</h2>
-    {% include "parts/experience-work" %}
-  </section>
-  <section>
-    {% include "parts/industry-talks" %}
-  </section>
 
 </article>
 </body>

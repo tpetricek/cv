@@ -6,7 +6,7 @@
   - range: 2019
   - start: 2019
   - label: Program change tracking with applications in AI research. Now  at *University of Cambridge*.
-  - label-long: Program change tracking with applications in AI research. Now Early Career Advanced 
+  - label-long: Program change tracking with applications in AI research. Now Early Career Advanced
       Fellow, Institute of Computing for Climate Science, *University of Cambridge*.
 
 * Joel Jakubovic
@@ -16,11 +16,18 @@
   - start: 2023
   - label: Research topic *Graphical Constraint Programming for Notational Freedom*.
 
+* Aleks Boruch-Gruszecki
+  - role: Post-doctoral Researcher
+  - institution: Charles University
+  - range: 2024 – present
+  - start: 2024
+  - label: Co-supervised with *Prof Jan Vitek*.
+
 * Joel Jakubovic
   - role: PhD Student
   - institution: University of Kent
   - range: 2019 – 2023
-  - start: 2019 
+  - start: 2019
   - label: Thesis *Achieving Self-Sustainability in Interactive Graphical Programming Systems*. Graduated in 2023.
 
 * Jan Liam Verter
@@ -46,6 +53,11 @@
 
 # [Advising](#advising)
 
+* Reconstructing the Boxer programming system for the web
+  - student: Jan Markvart
+  - year: ongoing
+  - kind: BSc
+  
 * Abstract Interpretation of pandas
   - student: Jan Hrubý
   - year: 2024
@@ -173,7 +185,7 @@
   - institution: University of Kent
   - range: 2018/19 – 2021/2022
   - year: 2018
-  - label: *Thesis supervision* 
+  - label: *Thesis supervision*
 
 * Supervisions (Part IB and II), BA
   - institution: University of Cambridge

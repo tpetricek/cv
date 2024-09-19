@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Publications</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek &mdash; List of Publications</h1>
+  </header>
+
+  {% assign selected_count = 0 %}
+  {% assign workshop_count = 0 %}
+  {% for it in publications %}
+  {% if it.type contains "selected" %}{% assign selected_count = selected_count | plus: 1 %}{% endif %}
+  {% if it.type contains "workshop" %}{% assign workshop_count = workshop_count | plus: 1 %}{% endif %}
+  {% endfor %}
+
+  <section>
+    <h2>Personal Statement</h2>
+    <p>
+      I'm the author of {{ selected_count }} papers in highly selective conferences and journals,
+      5 of which received a best paper award, academic monograph that will be published by
+      Cambridge University Press, as well as {{ workshop_count }} other publications
+      in conference and workshop  proceedings, some of which are highly cited. I wrote a book for professional
+      software developers, edited conference proceedings and special journal issue and also develop open-source
+      software.
+    </p>
+
+    <p>
+      For historical reasons, the primary publication venues for computer science research are conference
+      proceedings. Papers in highly-selective conferences have a standing equivalent to (or higher than)
+      journal publications. For this reason, papers in conferences such as PLDI (A*), POPL (A*),
+      ICFP (A), ECOOP (A) and ICALP (A) are listed in C1.
+    </p>
+  </section>
+
+  <section>
+    <h2>A. Scientific Monographs</h2>
+    {% assign pubtype = "monograph" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h2>C. Original Scientific Works</h2>
+    <h3>C1. International Professional Journals</h3>
+    {% assign pubtype = "selected" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>C3. International Peer-Reviewed Proceedings</h3>
+    {% assign pubtype = "workshop" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h2>E. Other Professional Work</h2>
+    <h3>Books and Tutorial Publications</h3>
+    {% assign pubtype = "tutorial" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>Editorial Work and Reviews</h3>
+    {% assign pubtype = "editorial" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h3>Open-Source Software</h3>
+    {% assign pubtype = "software" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+  <section>
+    <h2>H. Dissertation Thesis</h2>
+    {% assign pubtype = "thesis" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+</article>
+</body>
+</html>

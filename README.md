@@ -12,3 +12,10 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 
 * [Complete version](https://tpetricek.github.io/cv/complete.html) with everything in it
 * [Publications list](https://tpetricek.github.io/cv/publications.html) with everything in it
+
+## Habilitation materials
+
+* [Professional highlights](https://tpetricek.github.io/cv/habilitation/highlights.html) ([PDF](https://tpetricek.github.io/cv/habilitation/highlights.pdf))
+* [Curriculum vitae](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
+* [List of publications](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
+* [Citation report](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))

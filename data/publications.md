@@ -6,7 +6,7 @@
   - venue: 351 pages, Cambridge Unviersity Press (to appear)
   - type: monograph
   - comment: The book documents important episodes from the history of programming, interprets them using a novel conceptual
-       framework and provides programmers, computer scientists and historians of computing with a comprehensive account of 
+       framework and provides programmers, computer scientists and historians of computing with a comprehensive account of
        the history of programming.
 
 * Language and the Rise of the Algorithm by Jeffrey M. Binder (review)
@@ -22,18 +22,24 @@
   - venue: IEEE Transactions on Knowledge and Data Engineering, vol. 35, issue 9, pp. 9295-9306
   - doi: 10.1109/TKDE.2022.3222538
   - year: 2023
-  - type: journal
+  - type: selected
+  - citations: aia
+  - gscholar: 6
+  - wos: 1
+  - scopus: 2
 
 * Technical Dimensions of Programming Systems
   - authors: Joel Jakubovic, Jonathan Edwards and **Tomas Petricek**
   - venue: The Art, Science, and Engineering of Programming, vol. 7, issue 3, no. 13
   - doi: 10.22152/programming-journal.org/2023/7/13
   - year: 2023
-  - type: journal
+  - type: selected
+  - gscholar: 10
+  - scopus: 4
 
 * Interaction vs. Abstraction: Managed Copy and Paste
   - authors: Jonathan Edwards and **Tomas Petricek**
-  - venue: PAINT&nbsp;'22: Proceedings of the 1st ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments, pp 11-19 
+  - venue: PAINT&nbsp;'22: Proceedings of the 1st ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments, pp 11-19
   - doi: 10.1145/3563836.3568723
   - year: 2022
   - type: workshop
@@ -43,28 +49,38 @@
   - venue: Onward!&nbsp;'22: Proceedings of the 2022 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp 240-258
   - year: 2022
   - doi: 10.1145/3563835.3568736
-  - type: journal
-  
+  - type: selected
+  - gscholar: 1
+
 * Linked Visualisations via Galois Dependencies
   - authors: Roly Perera, Minh Nguyen, **Tomas Petricek** and Meng Wang
   - venue-too-long: Proceedings of the ACM on Programming Languages, vol. 6, issue POPL, no. 7, pp. 1-29
-  - venue: Proceedings of the ACM on Programming Languages, vol. 6 (POPL) no. 7, pp. 1-29
+  - venue: Proceedings of the ACM on Programming Languages, vol. 6 (POPL), pp. 1-29
   - year: 2022
   - doi: 10.1145/3498668
-  - type: journal
+  - type: selected
+  - if: 1.8
+  - citations: galois
+  - gscholar: 4
+  - wos: 1
+  - scopus: 2
 
 * Programming as Architecture, Design, and Urban Planning
   - authors: **Tomas Petricek**
   - venue: Onward!&nbsp;'21: Proceedings of the 2021 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp 114-124
   - year: 2021
   - doi: 10.1145/3486607.3486770
-  - type: journal
+  - type: selected
+  - scopus: 1
+  - gscholar: 1
 
 * Wrattler: Reproducible, Live and Polyglot Notebooks
   - authors: **Tomas Petricek**, James Geddes and Charles Sutton
   - venue: TaPP&nbsp;'18: Proceedings of the 10th USENIX Conference on Theory and Practice of Provenance, pp. 1-6
   - year: 2018
   - type: workshop
+  - scopus: 10
+  - gscholar: 15
 
 * Critique of ‘An anatomy of interaction: co-occurrences and entanglements’
   - authors: **Tomas Petricek**
@@ -78,21 +94,31 @@
   - venue: PLDI&nbsp;'16: Proceedings of the 37th ACM SIGPLAN Conference on Programming Language Design and Implementation, pp. 477-490
   - year: 2016
   - doi: 10.1145/2908080.2908115
-  - type: journal
+  - type: selected
+  - citations: fsharp-data
+  - gscholar: 39
+  - wos: 9
+  - scopus: 2
 
 * Against a Universal Definition of&nbsp;'Type'
   - authors: **Tomas Petricek**
   - venue: Onward!&nbsp;'15: Proceedings of the 2015 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp. 254-266
   - year: 2015
   - doi: 10.1145/2814228.2814249
-  - type: journal
+  - type: selected
+  - scopus: 2
+  - gscholar: 6
 
 * Effect Systems Revisited – Control-Flow Algebra and Semantics
   - authors: Alan Mycroft, Dominic Orchard and **Tomas Petricek**
   - venue: Essays Dedicated to Hanne Riis Nielson and Flemming Nielson on the Occasion of Their 60th Birthdays on Semantics, Logics, and Calculi, vol. 9560, pp. 1-32
   - year: 2015
   - doi: 10.1007/978-3-319-27810-0_1
-  - type: journal
+  - type: selected
+  - citations: effects-revisited
+  - gscholar: 32
+  - wos: 12
+  - scopus: 19
 
 * Embedding Effect Systems in Haskell
   - authors: Dominic Orchard and **Tomas Petricek**
@@ -100,13 +126,21 @@
   - year: 2014
   - doi: doi.org/10.1145/2633357.2633368
   - type: workshop
+  - citations: effects-haskell
+  - gscholar: 44
+  - wos: 18
+  - scopus: 2
 
 * Coeffects: A Calculus of Context Dependent Computation
   - authors: **Tomas Petricek**, Dominic Orchard and Alan Mycroft
   - venue: ICFP&nbsp;'14: Proceedings of the 19th ACM SIGPLAN International Conference on Functional Programming, pp. 123-135
   - year: 2014
   - doi: 10.1145/2628136.2628160
-  - type: journal
+  - type: selected
+  - citations: coeffects-icfp
+  - gscholar: 131
+  - wos: 39
+  - scopus: 64
 
 * The F# Computation Expression Zoo
   - authors: **Tomas Petricek** and Don Syme
@@ -114,13 +148,19 @@
   - year: 2014
   - doi: 10.1007/978-3-319-04132-2_3
   - type: workshop
+  - gscholar: 38
+  - scopus: 13
 
 * Coeffects: Unified Static Analysis of Context-Dependence
   - authors: **Tomas Petricek**, Dominic Orchard and Alan Mycroft
   - venue: ICALP'13: Proceedings of the 40th International Conference on Automata, Languages, and Programming, Part II, pp. 385-397
   - year: 2013
   - doi: 10.1007/978-3-642-39212-2_35
-  - type: journal
+  - type: selected
+  - citations: coeffects-icalp
+  - gscholar: 68
+  - wos: 28
+  - scopus: 33
 
 * Themes in Information-Rich Functional Programming for Internet-Scale Data Sources
   - authors: Don Syme, Keith Battocchi, Kenji Takeda, Dona Malayeri and **Tomas Petricek**
@@ -128,6 +168,8 @@
   - year: 2013
   - doi: 10.1145/2429376.2429378
   - type: workshop
+  - scopus: 19
+  - gscholar: 35
 
 * Extending Monads with Pattern Matching
   - authors: **Tomas Petricek**, Alan Mycroft and Don Syme
@@ -135,6 +177,10 @@
   - year: 2011
   - doi: 10.1145/2034675.2034677
   - type: workshop
+  - citations: match-bang
+  - gscholar: 12
+  - wos: 2
+  - scopus: 5
 
 * Joinads: A Retargetable Control-Flow Construct for Reactive, Parallel and Concurrent Programming
   - authors: **Tomas Petricek** and Don Syme
@@ -142,6 +188,8 @@
   - year: 2011
   - doi: 10.1007/978-3-642-18378-2_17
   - type: workshop
+  - scopus: 9
+  - gscholar: 21
 
 * The F# Asynchronous Programming Model
   - authors: Don Syme, **Tomas Petricek** and Dmitry Lomov
@@ -149,6 +197,10 @@
   - year: 2011
   - doi: 10.1007/978-3-642-18378-2_15
   - type: workshop
+  - citations: fsharp-async
+  - gscholar: 128
+  - wos: 38
+  - scopus: 57
 
 * Collecting Hollywood's Garbage: Avoiding Space-Leaks in Composite Events
   - authors: **Tomas Petricek** and Don Syme
@@ -156,63 +208,85 @@
   - year: 2010
   - doi: 10.1145/1806651.1806662
   - type: workshop
+  - scopus: 1
+  - gscholar: 6
 
 * Foundations of a live data exploration environment
   - authors: **Tomas Petricek**
   - venue: The Art, Science and Engineering of Programming, vol. 4, issue 3, no. 8
   - year: 2020
   - doi: 10.22152/programming-journal.org/2020/4/8
-  - type: journal
+  - type: selected
+  - scopus: 5
+  - gscholar: 6
 
 * What we talk about when we talk about monads
   - authors: **Tomas Petricek**
   - venue: The Art, Science and Engineering of Programming, vol. 2, issue 3, no. 12
   - year: 2018
   - doi: 10.22152/programming-journal.org/2018/2/12
-  - type: journal
+  - type: selected
+  - scopus: 5
+  - gscholar: 20
 
 * Miscomputation in software development: Learning to live with errors
   - authors: **Tomas Petricek**
   - venue: The Art, Science and Engineering of Programming, vol. 1, issue 2, no. 14
   - year: 2017
   - doi: 10.22152/programming-journal.org/2017/1/14
-  - type: journal
-  
+  - type: selected
+  - scopus: 4
+  - gscholar: 10
+
 * The Gamma: Programmatic Data Exploration for Non-programmers
   - authors: **Tomas Petricek**
   - venue: VL/HCC&nbsp;'22: Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing
   - year: 2022
   - doi: 10.1109/VL/HCC53370.2022.9833134
-  - type: journal
+  - type: selected
+  - gscholar: 4
+  - scopus: 1
 
 * Covid-19, Charitable Giving and Collectivism: A Data-Harvesting Approach
   - authors: Peter Taylor-Gooby, **Tomas Petricek**, Jack Cunliffe
   - venue: Journal of Social Policy, vol. 52, issue 3, pp. 473-494, Cambridge University Press
   - year: 2023
-  - doi: 10.1017/S0047279421000714 
+  - doi: 10.1017/S0047279421000714
   - if: 1.9
-  - type: journal
+  - type: selected
+  - citations: covid
+  - gscholar: 3
+  - wos: 2
+  - scopus: 1
 
 * Composable Data Visualizations
   - authors: **Tomas Petricek**
   - venue: Journal of Functional Programming, vol. 31, e. 13, Cambridge University Press
   - year: 2021
-  - doi: 10.1017/S0956796821000046 
+  - doi: 10.1017/S0956796821000046
   - if: 1.1
-  - type: journal
+  - type: selected
+  - citations: compost
+  - gscholar: 1
+  - wos: 1
+  - scopus: 1
 
 * Data Exploration Through Dot-Driven Development
   - authors: **Tomas Petricek**
   - venue: ECOOP&nbsp;'17: European Conference on Object-Oriented Programming. Associated software artifact has been evaluated and archived in DARTS, vol. 3, no. 2, pp. 12:1–12:2, 2017
   - year: 2017
   - doi:10.4230/LIPIcs.ECOOP.2017.21
-  - type: journal
+  - type: selected
+  - scopus: 4
+  - gscholar: 11
 
 * Technical Dimensions of Programming Systems
   - authors: Joel Jakubovic, Jonathan Edwards, **Tomas Petricek**
-  - venue: PLoP&nbsp;'21: Presented at 28th Conference on Pattern Languages of Programs, Fall 
+  - venue: PLoP&nbsp;'21: Presented at 28th Conference on Pattern Languages of Programs, Fall
   - year: 2021
   - type: workshop
+  - scopus: 4
+  - gscholar: 10
 
 * Complementary Science of Interactive Programming Systems (Extended Abstract)
   - authors: **Tomas Petricek**, Joel Jakubovic
@@ -233,7 +307,7 @@
   - authors: **Tomas Petricek**.
   - venue: LIVE&nbsp;'19: Presented at International Workshop on Live Programming
   - year: 2019
-  - url: http://tomasp.net/histogram 
+  - url: http://tomasp.net/histogram
   - type: workshop
 
 * Evaluating Programming Systems Design
@@ -242,6 +316,7 @@
   - year: 2019
   - url: https://ppig.org/papers/2019-ppig-30th-edwards
   - type: workshop
+  - gscholar: 8
 
 * Programming Language Theory: Thinking the Unthinkable
   - authors: **Tomas Petricek**
@@ -297,6 +372,10 @@
   - year: 2012
   - arxiv: 1202.2921
   - type: workshop
+  - citations: eval-strategies
+  - gscholar: 8
+  - wos: 2
+  - scopus: 3
 
 * Encoding Monadic Computations in C# using Iterators
   - venue: ITAT&nbsp;'09:  Proceedings of the Conference on Theory and Practice on Information Technologies, pp. 61–69
@@ -314,8 +393,8 @@
 * Accessing Data with F# Type Providers
   - comment: A highly rated (5 out of 5 stars) two-hour video course that introduces F#, type providers and the F# Data library that I developed as a post-doctoral researcher at Microsoft Research.
   - authors: **Tomas Petricek**
-  - venue: Pluralsight 
-  - url: https://www.pluralsight.com/courses/accessing-data-fsharp-type-providers 
+  - venue: Pluralsight
+  - url: https://www.pluralsight.com/courses/accessing-data-fsharp-type-providers
   - year: 2016
   - type: tutorial
 
@@ -358,8 +437,52 @@
   - type: editorial
 
 * Onward! 2019: Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software
-  - authors: Hidehiko Masuhara and **Tomas Petricek** (eds.) 
+  - authors: Hidehiko Masuhara and **Tomas Petricek** (eds.)
   - isbn: 978-1-4503-6995-4
   - year: 2019
   - venue: ACM, New York, United States
   - type: editorial
+
+* Context-Aware Programming Languages
+  - authors: **Tomas Petricek**
+  - doi: 10.48456/tr-906
+  - year: 2017
+  - venue: PhD Thesis, University of Cambridge, Available as UCAM-CL-TR-906
+  - type: thesis
+  - comment: Introduces a notion of *coeffects*, which has been presented in two highly-cited academic papers (ICALP '13, ICFP '14) and has been subject of multiple grants in the UK, France, USA and Iceland. A novel interactive web-based presentation of the work, published at https://tomasp.net/coeffects, has attracted over 35,000 visitors.
+
+* Compost.js: Composable Data Visualization Library
+  - year: 2020
+  - url: https://compostjs.github.io
+  - comment: JavaScript library for creating data visualization described in Journal of Functional Programming paper (JFP 2021).
+      The system inspired work at Institute of Computing for Climate Science, University of Cambridge.
+  - type: software
+
+* Coeffects: Context-Aware Programming Languages
+  - year: 2016
+  - url: http://tomasp.net/coeffects
+  - type: software
+  - comment: Interactive web-based essay that demonstrates the theory developed in my PhD thesis.
+      The essay has been recognised as an influential example of explorable visualization and has over 35,000 views.
+
+* The Gamma: Tools for Data Journalism
+  - url: http://thegamma.net
+  - type: software
+  - year: 2015
+  - comment: Allows journalists to create open data-driven articles and was presented at
+      European Conference on Computational and Data Journalism, 2016 and Computation+Journalism 2015, NYC.
+
+* Deedle: Exploratory Data Library for .NET
+  - year: 2013
+  - type: software
+  - url: https://fslab.org/Deedle
+  - comment: Data and time-series analysis library developed at BlueMountain Capital. The library has over 30
+      contributors, has been used for bioinformatics research and has a new industry maintainer. It was presented at CUFP 2014.
+
+* F# Data: Library for Data Access
+  - year: 2012
+  - type: software
+  - url: https://fsprojects.github.io/FSharp.Data
+  - comment: Library for accessing structured data using F# type providers. I created the first version, coordinated
+      the development and successfully transferred the library to a new industry maintainer. The library is
+      the most downloaded library for F# and has over 100 contributors.

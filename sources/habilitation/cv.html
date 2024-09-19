@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tomas Petricek - Curriculum Vitae</title>
+  <title>Tomas Petricek &mdash; Curriculum Vitae</title>
   {% include "styles/default" %}
 </head>
 <body>
@@ -10,17 +10,24 @@
   <header>
     <h1>Tomas Petricek</h1>
     <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
-  </header>  
-  
+  </header>
+
   <section>
     <h2>Academic Experience</h2>
-    {% include "parts/experience-academic" %}
+    <h3>Positions</h3>
+    {% assign expkind = "academic" %}
+    {% include "parts/experience-by-kind" %}
+    <h3>Education</h3>
+    {% assign expkind = "education" %}
+    {% include "parts/experience-by-kind" %}
+  </section>
+
+  <section>
+    <h2>Research Projects</h2>
+    {% include "parts/research-funding-recent-with-role" %}
   </section>
   <section>
-    {% include "parts/research-funding" %}
-  </section>  
-  <section>
-    {% include "parts/awards" %}
+    {% include "parts/projects" %}
   </section>
 
   <section>
@@ -28,21 +35,21 @@
     {% include "parts/membership" %}
   </section>
   <section>
+    {% include "parts/awards" %}
+  </section>
+  <section>
     {% include "parts/invited-talks" %}
   </section>
   <section>
     {% include "parts/research-visits-5years" %}
   </section>
-  <section>
-    {% include "parts/projects" %}
-  </section>
-  
+
   <section>
     <h2>Teaching and Supervision</h2>
-    {% include "parts/research-supervision" %}    
+    {% include "parts/research-supervision" %}
   </section>
   <section>
-    {% include "parts/supervised-theses-summary" %}    
+    {% include "parts/supervised-theses-summary" %}
   </section>
 
   <section>
@@ -50,7 +57,7 @@
     {% include "parts/refereeing-selected" %}
   </section>
   <section>
-    {% include "parts/service" %}    
+    {% include "parts/service" %}
   </section>
 
 </article>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Professional Highlights</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a></p>
+  </header>
+
+  {% assign selected_count = 0 %}
+  {% assign workshop_count = 0 %}
+  {% for it in publications %}
+  {% if it.type contains "selected" %}{% assign selected_count = selected_count | plus: 1 %}{% endif %}
+  {% if it.type contains "workshop" %}{% assign workshop_count = workshop_count | plus: 1 %}{% endif %}
+  {% endfor %}
+
+  {% assign advbs = advising | where:"kind","BSc"  | where:"institution","" | size %}
+  {% assign advms = advising | where:"kind","MSc"  | where:"institution","" | size %}
+  {% assign advbso = advising | where:"kind","BSc" | where:"institution","" | where:"year","ongoing" | size %}
+  {% assign advmso = advising | where:"kind","MSc" | where:"institution","" | where:"year","ongoing" | size %}
+
+  <section>
+    <h2>Professional Highlights</h2>
+    <ol class="spacious">
+      <li>
+        <strong>International Experience.</strong>
+        I obtained PhD from <em>University of Cambridge</em>, worked as post-doctoral researcher
+        at <em>Microsoft Research</em> and in <em>The Alan Turing Institute</em> in London.
+        I then spent 4 years as a lecturer (permanent academic position) at <em>University of Kent</em>.
+        I collaborate with multiple research groups and my recent co-authors and research collaborators
+        are based in the <em>UK</em>, <em>USA</em>, <em>Netherlands</em>, <em>Denmark</em>,
+        <em>Germany</em> and <em>France</em>.
+      </li>
+      <li>
+          <strong>Academic Publications.</strong>
+          I am the author of {{ selected_count }} papers in top-tier venues (including <em>PLDI</em>,
+          <em>POPL</em>, <em>ECOOP</em>, <em>ICFP</em> and <em>ICALP</em>), five of which received a best paper award and {{ workshop_count }}
+          other papers. I wrote a monograph on history of programming (to be published by
+          <em>Cambridge University Press</em>) and a tutorial book for professional developers
+          (selling over 10,000 copies). I have an h-index of 14 (6 in WoS) and my work has 880+
+          citations (160 in WoS).
+      </li>
+      <li>
+         <strong>Research Impact.</strong>
+      	 My PhD research, presented in a paper with 130+ citations (35 in WoS), introduced the notion
+         of <em>coeffects</em> which has since been subject of several grants in the <em>UK</em>,
+         <em>France</em>, <em>USA</em> and <em>Iceland</em>. It influenced the design of <em>Scala</em> and has been adopted by Meta
+         in the <em>Hack</em> language. My research on functional programming also directly
+         contributed to the design of the <em>F# language</em>.
+      </li>
+      <li>
+        <strong>Peer Recognition.</strong>
+        My paper on integration of external semi-structured data into a static
+        type system, was awarded <em>Distinguished Paper Award</em> at PLDI and selected as
+        <em>ACM SIGPLAN Research Highlight</em>, recognizing it as one of three best programming
+        language papers of the year. I have been an invited <em>keynote speaker</em> at 5&nbsp;academic
+        and industry conferences and joined the invitation-based
+        <em>IFIP WG 2.16 Language Design</em> group.
+      </li>
+      <li>
+        <strong>Technology Transfer.</strong>
+        My work is not limited to papers. The open-source <em>F# Data package</em> I
+        created is the most downloaded F# library and has over <em>110 industry contributors</em>.
+        My work on asynchronous programming has become a core component of the infrastructure at
+        Jet.com, a start-up acquired by Walmart for $3bn. The interactive web-based essays
+        presenting my work, published at <a href="http://tomasp.net">tomasp.net</a>,
+        have attracted <em>over 50,000 visitors</em>.
+      </li>
+      <li>
+        <strong>Research Funding.</strong>
+        I was awarded the 4-year <em>PRIMUS</em> grant at Charles University (worth €610,000) to
+        establish a resarch group focused on <em>Types for data-centric programming</em>. Previously,
+        I secured research funding (worth £420,000) from the UK Ministry of Defence (Dstl) and GCHQ for
+        applied research on trustworthy and accessible tooling for data science
+        and €50,000 from <em>Google Digital News Initiative</em>.
+      </li>
+      <li>
+        <strong>Teaching Experience.</strong>
+        I developed 2 new courses on <em>Programming Language Design and Implementation</em> at
+        Charles University, redesigned the <em>Software Engineering</em> module at University of Kent
+        and taught it to 40+ MSc and 200+ under&shy;graduate students. I taught or supervised
+        labs for 9 other courses ranging from algorithms and formal semantics to human-computer interaction
+        at Charles University, Kent and University of Cambridge.
+      </li>
+      <li>
+        <strong>Student and Research Supervision.</strong>
+        I supervise <em>1 PhD student</em> and <em>2 post-docs</em> at Charles University. Previously,
+        I supervised 1 PhD student at Unviersity of Kent (graduated in 2023),
+        1 post-doc (now at University of Cambridge) and 4 graduate and undergraduate internships.
+        At Charles University, I supervised
+        <em>{{ advbs }} Bachelor's theses</em> ({{ advbs | minus: advbso }} defended, {{ advbso }} ongoing)
+        and <em>{{ advms }} Master's theses</em> ({{ advms | minus: advmso }} defended).
+        At University of Kent, I supervised 40+ students for their final-year BSc and MSc projects
+        and I supervised 3 final Part II projects at Cambridge.</li>
+
+      </li>
+      <li>
+        <strong>Academic Service.</strong>
+        I serve as the <em>General Chair</em> of the International Conference on the Art, Science, and Engineering of Programming
+        2025 in Prague and have served as an organizer or co-chair of 5 other workshops and conference tracks.
+        I have served as a <em>Program Committee</em> member of {{ reviewing.pc | size }} conferences
+        and workshops including <em>OOPSLA</em>, <em>ECOOP</em>, <em>HOPL</em>, <em>Programming</em> and <em>Onward!</em>
+        I reviewed papers for {{ reviewing.reviewer | size }} other journals and conferences, served
+        as the examiner of <em>{{ reviewing.phd | size }} PhD theses</em> and reviewed {{ reviewing.grant | size }}
+        international grant applications.
+      </li>
+    </ol>
+  </section>
+
+</article>
+</body>
+</html>

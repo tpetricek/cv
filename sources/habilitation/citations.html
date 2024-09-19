@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Citation Report</title>
+  {% include "styles/default" %}
+  <style type="text/css">
+    body { 
+      counter-reset:cites;
+    }
+    ol { 
+      margin-left:55px;
+      margin-bottom:30px;
+    }
+    ol li {
+      counter-increment:cites;
+      list-style-type:none;
+    }
+    ol li:before {
+      content: counter(cites) ". ";
+      float: left;
+      margin-left:-40px;
+      width:35px;
+      margin-right:5px;
+      text-align: right;
+    }
+    p { break-inside:avoid; }
+    p.info1::after, p.info1::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
+
+    p.info1 { margin-left: 20px; margin-bottom: 2px; }
+    p.info2 { margin-left: 20px; margin-bottom: 20px; }
+    p.info1 strong { color:black; font-weight:400; }
+  </style>
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek &mdash; Citation Report</h1>
+  </header>
+
+  {% assign listed = 0 %}
+  {% assign listedwc = 0 %}
+  {% assign wos = 0 %}
+  {% assign wosxs = 0 %}
+  {% assign gs = 0 %}
+  {% assign scopus = 0 %}
+
+  {% for it in publications %}
+    {% assign wosn = it.citations | size %}
+    {% if wosn > 0 %}{% assign listedwc = listedwc | plus: 1 %}{% endif %}
+    {% if it.gscholar.value > 0 %}{% assign listed = listed | plus: 1 %}{% endif %}
+    {% assign wosxs = wosxs | plus: wosn %}
+    {% assign wos = wos | plus: it.wos.value %}
+    {% assign gs = gs | plus: it.gscholar.value %}
+    {% assign scopus = scopus | plus: it.scopus.value %}
+  {% endfor %}
+
+  <section>
+    <p>
+      The citation report below is based on data from Web of Science.       
+      It lists <em>{{ listed }} publications</em> for which there are citations in one of the commonly used scientific databases
+      (Web of Science, Scopus, Google Scholar). 
+      The report provides a detailed list of citations for <em>{{ listedwc }} publications</em>
+      based on data from the Web of Science, listing in total <em>{{ wosxs }} citing publications</em>.
+      The list excludes self-citations, i.e., citing papers co-authored by any of the paper authors.
+    </p>
+    <p>
+      For computer science publications, Web of Science is highly selective, so the report also includes
+      citation numbers from Scopus (<em>{{ scopus }} citations</em> in total) and 
+      Google Scholar (<em>{{ gs }} citations</em> in total)
+      for the listed papers.</p>
+    <p>
+      Total number of citations reported by commonly used scientific databases are
+      <em>156 (146 excluding self) in WoS</em>,
+      <em>270 in Scopus</em> and
+      <em>876 in Google</em>. The h-index values reported by those services are
+      <em>6 by WoS</em>,
+      <em>8 by Schopus</em> and
+      <em>14 by Google</em>. Details can be found in the attached reports.
+    </p>
+  </section>
+
+  <section>
+    <h2>Cited Publications</h2>
+
+      {% assign pubs_by_wos = publications | sort:"wos.value" | reverse %}
+      {% for it in pubs_by_wos  %}
+      {% if it.gscholar.value > 0 %}
+        <p>
+          {% if it.authors != "" %}{{ it.authors }}. {% endif %}
+          <em>{{ it.title }}</em>.
+          {% if it.venue != "" %}{{ it.venue }}{% if it.if != "" %} (IF:&nbsp;{{ it.if }}){% endif %}, {% endif %}
+          {% if it.doi != "" %}<a href="https://doi.org/{{ it.doi }}">{{ it.doi }}</a>,{% endif %}
+          {% if it.hdl != "" %}<a href="http://hdl.handle.net/{{ it.hdl }}">hdl:{{ it.hdl }}</a>,{% endif %}
+          {% if it.arxiv != "" %}<a href="https://arxiv.org/abs/{{ it.arxiv }}">arXiv:{{ it.arxiv }}</a>,{% endif %}
+          {% if it.url != "" %}{{ it.url }},{% endif %}
+          {% if it.isbn != "" %}ISBN {{ it.isbn }},{% endif %}
+          {{ it.year }}</p>
+        <p class="info1"><strong>Number of Citations</strong></p>
+        <p class="info2">
+          {% assign wosn = it.citations | size %}
+          {% if wosn > 0 %} Web of Science: {{ it.wos.value }} ({{ it.citations | size }} excluding self)<br />{% endif %}
+          {% if it.gscholar.hasvalue %} Google Scholar: {{ it.gscholar.value }}<br /> {% endif %}
+          {% if it.scopus.hasvalue %} Scopus: {{ it.scopus.value }}<br />{% endif %}
+        </p>
+        {% if wosn > 0 %}
+        <p class="info1"><strong>Selected Citing Publications</strong></p>
+        <ol>
+          {% for cit in it.citations %}
+          <li>
+            <p>{{ cit.authors }}.
+              <em>{{ cit.title }}</em>.
+              {% if cit.venue != "" %}{{ cit.venue }}, {% endif %}
+              {% if cit.isbn != "" %}ISBN {{ cit.isbn }},{% endif %}
+              {% if cit.doi != "" %}<a href="https://doi.org/{{ cit.doi }}">{{ cit.doi }}</a>,{% endif %}
+              {{ cit.year }}</p>
+          </li>
+          {% endfor %}
+        </ol>
+        {% endif %}
+      {% endif %}
+      {% endfor %}
+    
+  </section>
+</article>
+</body>
+</html>
