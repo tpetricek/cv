@@ -1,0 +1,29 @@
+{% assign first_year = "now" | date: "%Y" | minus: 6 %}
+
+{% assign allyears = "" | split: ',' %}
+{% for it in teaching %}
+  {% for ity in it.years %}
+    {% if ity.year >= first_year %}
+    {% assign y = ity.year | split: ',' %}
+    {% assign allyears = allyears | concat: y %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign sorted = allyears | sort | uniq | reverse %}
+{% for y in sorted %}
+  <h3>Year {{ y }}/{{ y | minus:1999 }}</h3>
+  <ul class="condensed">
+    {% for it in teaching %}
+      {% for ity in  it.years  %}
+      {% if ity.year == y %}
+    <li>
+      <p><strong>{{ it.course }}</strong>, <em>{{  ity.semester }}</em>, {{ it.institution }}{% if it.label != "" %}, {{ it.label }}{% endif %}
+    </p>
+    </li>
+      {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>  
+{% endfor %}
+

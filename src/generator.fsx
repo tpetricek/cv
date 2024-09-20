@@ -41,9 +41,11 @@ type Supervision =
   { person : string; role : string; institution : string; 
     start : int; range : string; label : string }
 
+type Year = 
+  { year : int; semester : string }
 type Teaching = 
   { course : string; institution : string; year : int; 
-    range : string; label : string }
+    range : string; label : string; years : seq<Year> }
 
 type Advising = 
   { title : string; student : string; institution : string; 
@@ -140,6 +142,15 @@ let parseItems defProp items =
               | _ -> failwith $"parseItems: Unexpected item: {kvp}" ] |> dict
       | _ -> failwith $"parseItems: Unexpected structure: {item}" ]
 
+let readYears (s:string) = 
+  [ for y in s.Split([| ',' |], StringSplitOptions.TrimEntries) ->
+      let (|AcadYear|) (s:string) =
+        match s.Split('/') with [| y1; y2 |] -> int y1 | _ -> failwith $"Wrong academic year: {s}"
+      match y.Split(' ') with 
+      | [| _; AcadYear year |] 
+      | [| AcadYear year |] -> { year = year; semester = y }
+      | _ -> failwith $"Wrong semester: {y}" ]
+
 let rec makeRecord<'T> () = 
   let convert (s:string) ty =
     if ty = typeof<string> then box s
@@ -147,6 +158,8 @@ let rec makeRecord<'T> () =
       if s = "" then box { hasvalue = false; value = 0 } 
       else box { hasvalue = true; value = Int32.Parse s }
     elif ty = typeof<int> then box (Int32.Parse s)
+    elif ty = typeof<seq<Year>> then 
+      if s = "" then box List.empty<Year> else box (readYears s)
     elif ty = typeof<seq<Publication>> then 
       if s = "" then box List.empty<Publication> else box (readCitations s)
     else failwith $"convert: Cannot convert to {ty.Name}"
@@ -223,7 +236,8 @@ let doit () =
       yield ty
       for fld in FSharpType.GetRecordFields(ty) do
         yield! allTypes seen fld.PropertyType
-    if ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<list<_>> then
+    if (ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<seq<_>>) ||
+       (ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<list<_>>) then
       yield! allTypes seen (ty.GetGenericArguments().[0]) }
 
   for t in allTypes Set.empty (model.GetType()) do

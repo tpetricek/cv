@@ -126,74 +126,101 @@
   - institution: University of Cambridge
 
 * Functional Reactive Programming for Data Binding in C#
-  - student: David Barker
+  - student: D. Barker
   - year: 2013
   - kind: BSc
   - institution: Cambridge
+  - student-long: David Barker
 
 # [Teaching](#teaching)
 
 * Write Your Own Tiny Programming Systems (NPRG077)
   - institution: Charles University
-  - range: 2023/2024
+  - range: 2023/2024 – present
+  - years: Winter 2023/24
   - year: 2023
 
 * Advanced C# Programming (NPRG038)
   - institution: Charles University
   - range: 2023/2024
+  - years: Summer 2023/24
   - year: 2023
   - label: *Course lab supervisor*
 
 * Programming Language Design (NPRG075)
   - institution: Charles University
-  - range: 2022/2023
+  - range: 2022/2023 – present
+  - years: Winter 2022/23, Winter 2024/25
   - year: 2022
 
 * Introduction to Linux (NSWI177)
   - institution: Charles University
   - range: 2022/2023
+  - years: Summer 2022/23
   - year: 2022
   - label: *Course lab supervisor*
 
 * Software Development (CO559), BSc
   - institution: University of Kent
   - range: 2021/2022
+  - years: Spring 2021/22
   - year: 2021
 
 * Software Engineering (CO886), MSc
   - institution: University of Kent
   - range: 2018/2019 – 2021/2022
+  - years: Spring 2018/19, Spring 2019/20, Spring 2020/21, Spring 2021/22
   - year: 2018
 
 * Algorithms, Correctness and Efficiency (CO518), BSc
   - institution: University of Kent
   - range: 2019/2020
+  - years: Autumn 2019/20
   - year: 2019
 
 * Computer Interaction and User Experience (CO582), BSc
   - institution: University of Kent
   - range: 2018/2019 – 2019/2020
+  - years: Autumn 2018/19, Autumn 2019/20
   - year: 2018
 
 * Group Project (CO600), BSc
   - institution: University of Kent
   - range: 2018/2019 – 2021/2022
   - year: 2018
+  - years: 2018/19, 2019/20, 2021/22 
   - label: *Final year project supervision*
+
+* Year in Computing Project (CO580), BSc
+  - institution: University of Kent
+  - range: 2018/2019 – 2019/2020
+  - years: Spring 2018/19, Spring 2019/20
+  - year: 2018
+  - label: *Project supervision*
 
 * Project and Dissertation (CO880), MSc
   - institution: University of Kent
   - range: 2018/19 – 2021/2022
+  - years: Spring 2018/19, Spring 2019/20, Spring 2021/22 
   - year: 2018
   - label: *Thesis supervision*
+
+* Project Research (CO880), MSc
+  - institution: University of Kent
+  - range: 2018/19 – 2021/2022
+  - years: Autumn 2018/19, Autumn 2019/20, Autumn 2021/22 
+  - year: 2018
+  - label: *Project supervision*
 
 * Supervisions (Part IB and II), BA
   - institution: University of Cambridge
   - range: 2011 – 2017
+  - years: 2011/12, 2012/13, 2013/14, 2014/15, 2015/16
   - year: 2011
   - label: Small group teaching covering programming language concepts, types, operational and denotational semantics and compilers.
 
 * Programming language F# (NPRG049)
   - institution: Charles University
   - range: 2009/2010
+  - years: Winter 2009/10
   - year: 2009

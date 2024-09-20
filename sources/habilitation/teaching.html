@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Teaching Report</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
+  </header>
+
+  <section>
+    <h2>Student Supervision</h2>
+    <h3>Doctoral Students</h3>
+    {% assign suprole = "PhD" %}
+    {% include "parts/research-supervision-by-role" %}
+  </section>
+
+  <section>
+    <h3>Internships</h3>
+    {% assign suprole = "Internship" %}
+    {% include "parts/research-supervision-by-role" %}
+  </section>
+ 
+  <section>
+    {% include "parts/supervised-theses" %}
+  </section>
+
+  <section>
+    <h2>Recent Teaching</h2>
+    {% include "parts/teaching-experience-list-5years" %}
+  </section>
+
+  <section>
+    <h2>Committee Membership</h2>
+    {% include "parts/administration" %}
+  </section>
+
+
+</article>
+</body>
+</html>

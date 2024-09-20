@@ -155,3 +155,15 @@
   - range: 2021 – 2022
   - start: 2021
   - label: Reviewed 30+ reports of plagiarism and other academic misconduct.
+
+* Committee for Final State Exams in Bachelor Study Programs
+  - institution: Charles University
+  - range: 2024 – present
+  - start: 2024
+  - label: Nominated in September 2024. Awaiting to be approved in 2024/25.
+
+* Committee for Final State Exams in Master Study Programs
+  - institution: Charles University
+  - range: 2024 – present
+  - start: 2024
+  - label: Nominated in September 2024. Awaiting to be approved in 2024/25.

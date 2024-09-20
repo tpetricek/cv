@@ -35,7 +35,9 @@
 
   <section>
     <h2>Teaching and Supervision</h2>
-    {% include "parts/research-supervision" %}
+    <h3>Research Supervision</h3>
+    {% assign suprole = "" %}
+    {% include "parts/research-supervision-by-role" %}
   </section>
   <section>
     {% include "parts/teaching-experience" %}
@@ -52,6 +54,7 @@
     {% include "parts/service" %}
   </section>
   <section>
+    <h3>Administration</h3>
     {% include "parts/administration" %}
   </section>
 

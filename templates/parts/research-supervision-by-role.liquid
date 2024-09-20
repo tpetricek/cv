@@ -1,10 +1,11 @@
-<h3>Research Supervision</h3>
 <ul class="condensed">
   {% assign super_by_start = supervision | sort:"start" | reverse %}
   {% for it in super_by_start %}
+  {% if it.role contains suprole %}
   <li>
     <p><strong>{{ it.person }}</strong> ({{ it.role }}), {{ it.institution }}, {{ it.range }}</p>
     <p>{{ it.label }}</p>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>

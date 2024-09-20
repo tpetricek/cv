@@ -45,8 +45,10 @@
   </section>
 
   <section>
-    <h2>Teaching and Supervision</h2>
-    {% include "parts/research-supervision" %}
+    <h2>Student and Research Supervision</h2>
+    <h3>Research Supervision</h3>
+    {% assign suprole = "" %}
+    {% include "parts/research-supervision-by-role" %}
   </section>
   <section>
     {% include "parts/supervised-theses-summary" %}
@@ -60,6 +62,13 @@
     {% include "parts/service" %}
   </section>
 
+  <section>
+    <h2>Industry Engagement</h2>
+    {% include "parts/experience-work" %}
+  </section>
+  <section>
+    {% include "parts/industry-talks" %}
+  </section>
 </article>
 </body>
 </html>
