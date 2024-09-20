@@ -7,6 +7,9 @@
   - role: Principal Investigator
   - label: Awarded €610,000 for research on *Types for data-centric programming* to cover 60% FTE of
       my time, two post-docs for 24 months each and 2 PhD students for the duration of the project.
+  - outputs:
+    * 1 PhD student and 1 post-doc joined the research group in April 2024 and May 2024.
+    * Workshop paper submitted to *HATRA '24* workshop at the *SPLASH 2024* conference
 
 * Dstl & GCHQ grants
   - institution: The Alan Turing Institute
@@ -15,6 +18,9 @@
   - role: Principal Investigator
   - label: Awarded £420,000 for research on tooling for data science to cover a post-doc for 6 months,
       Research Software Engineer for 3 years, 3 summer interns, my salary/buyout for 1 day/week.
+  - outputs:
+    * 3 top-tier papers in *POPL*, *JFP*, *VL/HCC* and workshop papers in *TaPP*
+    * Three open-source software packages ([wrattler.org](http://www.wrattler.org), [compostjs.github.io](https://compostjs.github.io) and [turing.thegamma.net](https://turing.thegamma.net))
 
 * Innovation Fund
   - institution: Google Digital News Initiative
@@ -23,6 +29,9 @@
   - role: Principal Investigator
   - label: Awarded €50,000 for research on *Programming tools for data journalism*. My proposal was selected as one
       of 128 out of 1,200 and allowed me to develop an independent research project at The Alan Turing Institute.
+  - outputs:
+    * Paper in *ECOOP*, extended abstracts in digital journalism venues, openn-source software ([thegamma.net](https://turing.thegamma.net))
+    * Workshop hosted at *The Alan Turing Institute* bringing together journalists, academics and policy makers
 
 * Fellowship
   - institution: ACM History Committee
@@ -30,6 +39,8 @@
   - start: 2018
   - label: Awarded $4000 to study the history of programming errors, looking at technical, formal and
       social means for mitigating them, resulting in a work-in-progress book *Cultures of Programming*.
+  - outputs:
+    - Draft paper, serving as the basis for Cambridge University Press monograph *Cultures of Programming*
 
 * Travel Grants
   - institution: ACM

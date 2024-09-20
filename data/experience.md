@@ -73,7 +73,7 @@
   - institution: Microsoft Research, Cambridge
   - range: April 2007 – July 2007 and October 2008 – April 2009
   - start: 2007
-  - kind: work, internship
+  - kind: work, internship, international
   - label: Contributed to the development of F# tooling for Visual Studio, designed an F# language extension for
       parallel, asynchronous and concurrent programming and prototyped novel approach to multi-tier web development.
 
@@ -81,6 +81,6 @@
   - institution: BlueMountain Capital Management, New York
   - range: August 2013 – November 2013
   - start: 2013
-  - kind: work, internship
+  - kind: work, internship, international
   - label: Developed Deedle, an open-source data and time-series analytics library for .NET and integrated it into
       existing codebase, replacing earlier technologies; the library has been adopted at BlueMountain and externally.

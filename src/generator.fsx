@@ -19,13 +19,16 @@ let data = __SOURCE_DIRECTORY__ @ ".." @ "data"
 type OptionInt = 
   { hasvalue : bool; value : int }
 
+type Output = 
+  { output : string }
+
 type Employment = 
   { role : string; institution : string; start : int; 
     range : string; label : string; kind : string }
 
 type Funding = 
   { grant : string; institution : string; start : int; 
-    range : string; label : string; role : string }
+    range : string; label : string; role : string; outputs : seq<Output> }
 
 type Award = 
   { award : string; venue : string; year : int; label : string }
@@ -63,7 +66,7 @@ type Membership =
 
 type Project = 
   { title : string; range : string; start : int; institution : string; 
-    label : string; role : string  }
+    label : string; role : string; outputs : seq<Output> }
 
 type Talk = 
   { title : string; venue : string; year : int; link : string; }
@@ -98,8 +101,10 @@ type Data =
     projects : Project list
     memberships : Membership list
     talks : Talk list
-    publications : Publication list
-    }
+    publications : Publication list }
+
+type Content = 
+  { content : string; title : string }
 
 // --------------------------------------------------------------------------------------
 // Logging
@@ -133,12 +138,17 @@ let parseItems defProp items =
   [ for item in items do
       match item with 
       | [Span(b, _); ListBlock(_, kvps, _)] ->
-          [ yield defProp, formatSpans b
+          [ yield defProp, [formatSpans b]
             for kvp in kvps do
               match kvp with 
+              | [ Span([Literal(ColSplit(k, ""), _)], _); ListBlock(_, pars, _) ] -> 
+                  let vals = pars |> List.map (function
+                      | [Span(lits, _) | Paragraph(lits, _)] -> formatSpans lits
+                      | v -> failwith $"parseItems: Unexpected value: {v}")
+                  yield k, vals
               | [ Span(Literal(ColSplit(k, lit), _)::lits, _) ] 
               | [ Paragraph(Literal(ColSplit(k, lit), _)::lits, _) ] -> 
-                  yield k, formatSpans (Literal(lit, None)::lits) 
+                  yield k, [formatSpans (Literal(lit, None)::lits)]
               | _ -> failwith $"parseItems: Unexpected item: {kvp}" ] |> dict
       | _ -> failwith $"parseItems: Unexpected structure: {item}" ]
 
@@ -152,20 +162,24 @@ let readYears (s:string) =
       | _ -> failwith $"Wrong semester: {y}" ]
 
 let rec makeRecord<'T> () = 
-  let convert (s:string) ty =
-    if ty = typeof<string> then box s
-    elif ty = typeof<OptionInt> then 
-      if s = "" then box { hasvalue = false; value = 0 } 
-      else box { hasvalue = true; value = Int32.Parse s }
-    elif ty = typeof<int> then box (Int32.Parse s)
-    elif ty = typeof<seq<Year>> then 
-      if s = "" then box List.empty<Year> else box (readYears s)
-    elif ty = typeof<seq<Publication>> then 
-      if s = "" then box List.empty<Publication> else box (readCitations s)
-    else failwith $"convert: Cannot convert to {ty.Name}"
+  let convert (ss:string list) ty =
+    if ty = typeof<seq<Output>> then
+      box [ for s in ss -> { output = s } ] 
+    else
+      let s = List.exactlyOne ss
+      if ty = typeof<string> then box s
+      elif ty = typeof<OptionInt> then 
+        if s = "" then box { hasvalue = false; value = 0 } 
+        else box { hasvalue = true; value = Int32.Parse s }
+      elif ty = typeof<int> then box (Int32.Parse s)
+      elif ty = typeof<seq<Year>> then 
+        if s = "" then box List.empty<Year> else box (readYears s)
+      elif ty = typeof<seq<Publication>> then 
+        if s = "" then box List.empty<Publication> else box (readCitations s)
+      else failwith $"convert: Cannot convert to {ty.Name}"
   let flds = FSharpType.GetRecordFields(typeof<'T>)
   fun (rcd:System.Collections.Generic.IDictionary<_, _>) ->
-    let get fn = if rcd.ContainsKey(fn) then rcd.[fn] else ""
+    let get fn = if rcd.ContainsKey(fn) then rcd.[fn] else [""]
     let vals = [| for f in flds -> convert (get f.Name) f.PropertyType |]
     unbox<'T>(FSharpValue.MakeRecord(typeof<'T>, vals))
 
@@ -192,13 +206,41 @@ let readInlineRecords<'T> (ps:string list) sec pars =
   [ for s in items ->
       match s.Split([|','|], StringSplitOptions.TrimEntries) with 
       | kvps when kvps.Length <= ps.Length -> 
-          let kvps = Array.append kvps (Array.create (ps.Length - kvps.Length) "")
+          let kvps = Array.append kvps (Array.create (ps.Length - kvps.Length) "") |> Array.map (fun v -> [v])
           Seq.zip ps kvps |> dict |> maker
       | _ -> failwith $"readKvpList: Cannot split item: {s}. Expected {ps.Length} items." ]
 
 // --------------------------------------------------------------------------------------
 // Processing
 // --------------------------------------------------------------------------------------
+
+let parser = FluidParser()
+let options = TemplateOptions()
+options.FileProvider <- new PhysicalFileProvider(__SOURCE_DIRECTORY__ @ ".." @ "templates");
+
+let rec allTypes seen (ty:System.Type) = seq {
+  if Set.contains ty.FullName seen then () else
+  let seen = Set.add ty.FullName seen
+  if FSharpType.IsRecord(ty) then 
+    yield ty
+    for fld in FSharpType.GetRecordFields(ty) do
+      yield! allTypes seen fld.PropertyType
+  if (ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<seq<_>>) ||
+      (ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<list<_>>) then
+    yield! allTypes seen (ty.GetGenericArguments().[0]) }
+
+for t in allTypes Set.empty typeof<Data> do
+  options.MemberAccessStrategy.Register(t)
+options.MemberAccessStrategy.Register(typeof<Content>)
+
+
+let processFile f outf model =
+  let src = File.ReadAllText(f)
+  let templ = parser.Parse(src) 
+  let ctx = new TemplateContext(model, options)
+  let out = templ.Render(ctx)
+  File.WriteAllText(outf, out)
+
 
 let doit () =
   cprint ConsoleColor.DarkGray "Updating documents"
@@ -226,25 +268,8 @@ let doit () =
       talks = readRecords<Talk> "title" "#talks" pars
       publications = readRecords<Publication> "title" "#pubs" pars
     }
-  let options = TemplateOptions()
-  options.FileProvider <- new PhysicalFileProvider(__SOURCE_DIRECTORY__ @ ".." @ "templates");
 
-  let rec allTypes seen (ty:System.Type) = seq {
-    if Set.contains ty.FullName seen then () else
-    let seen = Set.add ty.FullName seen
-    if FSharpType.IsRecord(ty) then 
-      yield ty
-      for fld in FSharpType.GetRecordFields(ty) do
-        yield! allTypes seen fld.PropertyType
-    if (ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<seq<_>>) ||
-       (ty.IsGenericType && ty.GetGenericTypeDefinition() = typedefof<list<_>>) then
-      yield! allTypes seen (ty.GetGenericArguments().[0]) }
-
-  for t in allTypes Set.empty (model.GetType()) do
-    options.MemberAccessStrategy.Register(t)
-
-  let parser = FluidParser()
-  
+  let layout = __SOURCE_DIRECTORY__ @ ".." @ "layouts" @ "index.html"
   let sources = __SOURCE_DIRECTORY__ @ ".." @ "sources"
   let rec collectDirs dir = seq {
     yield dir
@@ -253,13 +278,17 @@ let doit () =
 
   for sourceDir in dirs do
     Directory.CreateDirectory(sourceDir.Replace("sources", "docs")) |> ignore
-    for f in Directory.GetFiles(sourceDir) do  
+    for f in Directory.GetFiles(sourceDir, "*.md") do  
+      let outf = f.Replace("sources", "docs").Replace(".md", ".html")
       let src = File.ReadAllText(f)
-      let templ = parser.Parse(src) 
-      let ctx = new TemplateContext(model, options)
-      let out = templ.Render(ctx)
+      let title = Markdown.Parse(src).Paragraphs |> List.pick (function Heading(1, spans, _) -> Some(formatSpans spans) | _ -> None)
+      let html = Markdown.ToHtml(src) 
+      processFile layout outf { content = html; title = title }
+      cprint ConsoleColor.DarkGray "Processed: %s" outf
+
+    for f in Directory.GetFiles(sourceDir, "*.html") do  
       let outf = f.Replace("sources", "docs")
-      File.WriteAllText(outf, out)
+      processFile f outf model
       cprint ConsoleColor.DarkGray "Processed: %s" outf
   cprint ConsoleColor.Green "Update completed"
 

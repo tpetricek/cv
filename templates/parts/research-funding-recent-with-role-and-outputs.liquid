@@ -8,6 +8,8 @@
       (<em>{{ it.role }}</em>){% endif %},
     {{ it.range }}</p>
     <p>{{ it.label }}</p>
+    <p><em style="font-weight:400">Project Outputs</em></p> 
+    <ul>{% for out in it.outputs %}<li>{{ out.output }}</li>{% endfor %}</ul>
   </li>
   {% endif %}
   {% endfor %}

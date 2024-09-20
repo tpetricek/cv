@@ -13,12 +13,4 @@ It turns the source data in `data` (written in machine readable Markdown) into v
 * [Complete version](https://tpetricek.github.io/cv/complete.html) - ~5 page version with everything but not publications
 * [Brief version](https://tpetricek.github.io/cv/brief.html) - ~3 page version focused on teaching and academic service
 * [Publications list](https://tpetricek.github.io/cv/publications.html) - all the publications
-
-## Habilitation materials
-
-* [Habilitation materials](https://tpetricek.github.io/cv/habilitation/)
-* [Professional highlights](https://tpetricek.github.io/cv/habilitation/highlights.html) ([PDF](https://tpetricek.github.io/cv/habilitation/highlights.pdf))
-* [Curriculum vitae](https://tpetricek.github.io/cv/habilitation/cv.html) ([PDF](https://tpetricek.github.io/cv/habilitation/cv.pdf))
-* [List of publications](https://tpetricek.github.io/cv/habilitation/publications.html) ([PDF](https://tpetricek.github.io/cv/habilitation/habilitation.pdf))
-* [Citation report](https://tpetricek.github.io/cv/habilitation/citations.html) ([PDF](https://tpetricek.github.io/cv/habilitation/citations.pdf))
-* [Teaching report](https://tpetricek.github.io/cv/habilitation/teaching.html) ([PDF](https://tpetricek.github.io/cv/habilitation/teaching.pdf))
+* [Habilitation materials](https://tpetricek.github.io/cv/habilitation/) - lots of tedious paperwork for promotion

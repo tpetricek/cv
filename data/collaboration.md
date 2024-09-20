@@ -140,6 +140,8 @@
   - institution: The Alan Turing Institute
   - role: Co-Investigator
   - label: Joined and reshaped the project to allow integration of work by 3 post-docs and 1 PhD student.
+  - outputs:
+    * Collaboration resulted in a joint paper in *IEEE Transactions on Knowledge and Data Engineering*.
 
 * ExtremeXP
   - range: 2023 – present
@@ -147,6 +149,8 @@
   - institution: Horizon Europe, MFF UK
   - role: Member
   - label: Contributing to the design of novel data visualization tools and gamification systems.
+  - outputs:
+    * Novel visualization design, presented at an internal project meeting.
 
 * PROGRAMme: What is a computer program?
   - range: 2017 – present
@@ -154,6 +158,9 @@
   - institution: ANR France
   - role: Member
   - label: Interdisciplinary collaborative project, serving as co-editor for the resulting work-in-progress book.
+  - outputs:
+    * Collaborative manuscript *What is a computer program?* submitted to a potential publisher.
+    * Participation in the project inspired invited talk at *ASL/APA Meeting* in San Francisco.
 
 * Language, Picture, Gesture: Forms of Discursivity
   - range: 2024 – present
@@ -161,6 +168,8 @@
   - institution: UNCE, MFF UK
   - role: Junior Researcher
   - label: Studying programming and interactive systems from a broader inter-disciplinary perspective.
+  - outputs:
+    * Talk *Interactive Programming as a Shift from Language to Gesture* at a project conference in autumn 2024.
 
 # [Industry talks](#talks)
 
