@@ -73,7 +73,7 @@ type Talk =
 
 type Publication =
   { title : string; venue : string; year : int; authors : string; ``type`` : string; ``if`` : string
-    hdl : string; arxiv : string; url : string; doi: string; isbn: string; comment: string;
+    hdl : string; arxiv : string; url : string; doi: string; isbn: string; comment: string; impact: string
     citations : seq<Publication>; wos : OptionInt; gscholar : OptionInt; scopus : OptionInt }
 
 type PC = { venue : string; year : int; highlight : string }

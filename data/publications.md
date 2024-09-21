@@ -2,12 +2,18 @@
 
 * Cultures of Programming: The Development of Programming Concepts and Methodologies
   - authors: **Tomas Petricek**
-  - year: 2024
-  - venue: 351 pages, Cambridge Unviersity Press (to appear)
+  - year: 2025
+  - venue: 351 pages, Cambridge Unviersity Press (in press)
   - type: monograph
   - comment: The book documents important episodes from the history of programming, interprets them using a novel conceptual
        framework and provides programmers, computer scientists and historians of computing with a comprehensive account of
        the history of programming.
+  - impact: The monograph develops a novel framework for understanding the development of concepts and methodo&shy;logies 
+      that programmers rely on in their work. It documents key episodes from the history of programming, interprets them 
+      in a new way and provides a rigorous basis for folklore notions such as hacker culture. The book compiles research 
+      conducted over the last 6 years, which already attracted interest, including an _invited industry keynote_ at _CodeMesh 2020_ and 
+      _invited talk_ at _Spring Meeting of the Association for Symbolic Logic_ and _Meeting of the Pacific 
+      Division of the American Philosophical Association_ (ASL/APA) 2023.
 
 * Language and the Rise of the Algorithm by Jeffrey M. Binder (review)
   - authors: **Tomas Petricek**
@@ -34,8 +40,13 @@
   - doi: 10.22152/programming-journal.org/2023/7/13
   - year: 2023
   - type: selected
-  - gscholar: 10
+  - gscholar: 16
   - scopus: 4
+  - impact: This recent paper, already with 16 citations (4 Scopus), makes explicit the distinction between programming languages 
+      and programming systems. It provides a conceptual framework for studying _programming systems_, addressing the need of an 
+      emerging research community. The framework has already been employed to describe novel programming systems developed by
+      researchers in France, United Kingdom, United States and Germany.
+      The associated online catalogue ([tomasp.net/techdims](https://tomasp.net/techdims/)) was accessed 10k+ times.
 
 * Interaction vs. Abstraction: Managed Copy and Paste
   - authors: Jonathan Edwards and **Tomas Petricek**
@@ -99,6 +110,11 @@
   - gscholar: 39
   - wos: 9
   - scopus: 2
+  - impact: The paper presents a practical method for integrating external information sources into statically typed programming languages. 
+      Published in _CORE A*_-rated PLDI conference, it provides theoretical foundations for a widely adopted F# library developed by the authors and industry contributors. 
+      The paper formalizes the library introducing a novel notion of _relative safety_. In addition to a wide-spread industrial adoption 
+      (over 6.0M downloads; 102 OSS contributors), the work has been awarded the PLDI _Distinguished Paper_ award and was selected as 
+      one of three _ACM SIGPLAN Research Highlight_ papers for 2018.
 
 * Against a Universal Definition of&nbsp;'Type'
   - authors: **Tomas Petricek**
@@ -141,7 +157,14 @@
   - gscholar: 131
   - wos: 39
   - scopus: 64
-
+  - impact: This paper gives a wide-ranging development of _coeffects_, introduced a year before in a shorter paper by the authors.
+      This longer paper appeared at the _CORE A_-rated ICFP conference and presents a unified and rigorous treatment of coeffects.
+      It promulgated the idea of coeffects in the functional programming community and has 130+ citations (64 Scopus, 39 WoS) and
+      influenced the design of _Scala_ and the _Hack_ language developed by Meta.
+      The notion of coeffects has since been the topic of several grants in the UK, France, US, and Iceland. The associated 
+      interactive essay ([http://tomasp.net/coeffects](tomasp.net/coeffects)), which provides an accessible introduction to the work, 
+      received over 30k unique visits.
+  
 * The F# Computation Expression Zoo
   - authors: **Tomas Petricek** and Don Syme
   - venue: PADL 2014: Proceedings of the 16th International Symposium on Practical Aspects of Declarative Languages, vol. 8324, pp. 33-48
@@ -150,6 +173,11 @@
   - type: workshop
   - gscholar: 38
   - scopus: 13
+  - impact: The paper presents a canonical description of _computation expressions_, an influential F# language feature developed earlier 
+      by the authors. F# computation expressions have been widely adopted by the industry for asynchronous and concurrent programming.
+      The theoretical development in this paper directly inspired the design of corresponding langauge constructs in _C#_, _TypeScript_ 
+      and mroe recently _JavaScript_. Although the main impact of this work is industrial, the paper also had impact on the programming 
+      language research community with 38 citations (13 Scopus) thanks to its novel unification of monadic abstractions.
 
 * Coeffects: Unified Static Analysis of Context-Dependence
   - authors: **Tomas Petricek**, Dominic Orchard and Alan Mycroft

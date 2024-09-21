@@ -24,7 +24,7 @@ As listed on the [official Habilitation instructions](https://www.mff.cuni.cz/en
  5. Proof of work experience (not included)
  6. [**Teaching statement**](statement.html) ([PDF](statement.pdf))
  7. [**Teaching report**](teaching.html) ([PDF](teaching.pdf)) - signed!
- 8. TODO Annotated selction of 5 papers
+ 8. [**Selected publications**](selected.html) ([PDF](selected.pdf)) 
  9. [**List of publications**](publications.html) ([PDF](publications.pdf))
  10. [**Citation report**](citations.html) ([PDF](citations.pdf))
  11. Copies of relevant WoS pages (not included)
