@@ -112,6 +112,27 @@
     </ol>
   </section>
 
+  <section>
+    <h2>Research Projects</h2>
+    {% include "parts/research-funding-recent-with-role-and-outputs" %}
+  </section>
+  <section>
+    {% include "parts/projects-with-outputs" %}
+  </section>
+
+  <section>
+    <h2>International Experience</h2>
+    {% assign expkind = "international" %}
+    {% include "parts/experience-by-kind" %}
+  </section>
+
+
+  <section>
+    <h2>Scientific Supervision</h2>
+    {% assign suprole = "P" %}
+    {% include "parts/research-supervision-by-role" %}
+  </section>
+
 </article>
 </body>
 </html>
