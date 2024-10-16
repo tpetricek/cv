@@ -7,17 +7,17 @@ http://tomasp.net | [tomas@tomasp.net](mailto:tomas@tomasp.net)
 </header>
 <section>
 
-## Professional Highlights
+## Highlights
 
  1. [**Professional highlights**](highlights.html) ([PDF](highlights.pdf))
+ 2. [**Dissertation preface**](commentary.html) ([PDF](commentary.pdf))
 
-## Habilitation Dissertation
+## Thesis
 
- 2. [**Dissertation preface**](preface.html) ([PDF](preface.pdf))
- 1. [**Habilitation dissertation** (PDF, 86 pages)](thesis/thesis.pdf) - commentary only
- 2. [**Habilitation dissertation** (PDF, 239 pages)](thesis/full.pdf) - with full papers
+ 1. [**Habilitation thesis** (PDF, 86 pages)](thesis/thesis.pdf) - commentary only
+ 2. [**Habilitation thesis** (PDF, 239 pages)](thesis/full.pdf) - with full papers
 
-## Required Documents
+## Documents
 
  1. Personal data consent (not included)
  2. Application form (not included)
