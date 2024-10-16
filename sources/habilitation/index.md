@@ -10,7 +10,7 @@ http://tomasp.net | [tomas@tomasp.net](mailto:tomas@tomasp.net)
 ## Highlights
 
  1. [**Professional highlights**](highlights.html) ([PDF](highlights.pdf))
- 2. [**Dissertation preface**](commentary.html) ([PDF](commentary.pdf))
+ 2. [**Dissertation preface**](preface.html) ([PDF](preface.pdf))
 
 ## Thesis
 
