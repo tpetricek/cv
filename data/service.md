@@ -2,6 +2,7 @@
 
 ## [Program Committee Member](#pc)
 
+* HaPoP, 2024
 * OOPSLA, 2024, *
 * Onward!, 2024, *
 * Onward! Essays, 2024
