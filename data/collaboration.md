@@ -1,5 +1,10 @@
 ﻿# [Visits](#visits)
 
+* IFIP 2.16 Working Group, CMU
+  - date: March 2024
+  - year: 2024
+  - label: Guest at a week-long meeting, talk on theory of programming systems
+
 * HPI Potsdam
   - date: November 2023
   - year: 2023
@@ -35,7 +40,7 @@
   - year: 2020
   - label: Virtual invited talk on types for data exploration tools
 
-* IFIP 2.16 Working Group
+* IFIP 2.16 Working Group, Nice
   - date: November 2019
   - year: 2019
   - label: Guest at a week-long meeting, talk on programming as interaction
