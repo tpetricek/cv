@@ -75,7 +75,7 @@
 * University of Ghent, 2022
 * CTU Prague, 2023
 * Université Paris-Saclay, 2024
-* Hasso Plattner Institute, 2024
+* Hasso Plattner Institute, 2025
 
 ## [Grant Reviewer](#grant)
 
