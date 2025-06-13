@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Curriculum Vitae</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
+  </header>
+
+  <section>
+    <h2>Academic Experience</h2>
+    <h3>Positions</h3>
+    {% assign expkind = "academic" %}
+    {% include "parts/experience-by-kind" %}
+    <h3>Education</h3>
+    {% assign expkind = "education" %}
+    {% include "parts/experience-by-kind" %}
+  </section>
+
+  <section>
+    <h2>Academic Recognition and Collaboration</h2>
+    {% include "parts/membership" %}
+  </section>
+  <section>
+    {% include "parts/awards" %}
+  </section>
+  <section>
+    {% include "parts/invited-talks" %}
+  </section>
+
+  <section>
+    {% include "parts/research-funding" %}
+  </section>
+
+  <section>
+    <h2>Community Service and Refereeing</h2>
+    {% include "parts/refereeing-selected" %}
+  </section>
+  <section>
+    {% include "parts/service" %}
+  </section>
+
+</article>
+</body>
+</html>
