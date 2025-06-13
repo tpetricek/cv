@@ -1,4 +1,3 @@
-<h3>Project Funding</h3>
 <ul>
   {% assign funding_by_start = funding | sort:"start" | reverse %}
   {% for it in funding_by_start %}
@@ -8,7 +7,7 @@
       (<em>{{ it.role }}</em>){% endif %},
     {{ it.range }}</p>
     <p>{{ it.label }}</p>
-    <p><em style="font-weight:400">Project Outputs</em></p> 
+    <p><em style="font-weight:400">Project Outputs</em></p>
     <ul>{% for out in it.outputs %}<li>{{ out.output }}</li>{% endfor %}</ul>
   </li>
   {% endif %}

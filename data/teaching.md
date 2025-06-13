@@ -53,11 +53,37 @@
 
 # [Advising](#advising)
 
+* Benchmarking a baseline fully-in-place functional language compiler
+  - student: Jaromír Procházka
+  - kind: BSc
+  - year: ongoing
+
+
+* Interactive environment for visual creative coding
+  - student: Erika Kunová
+  - kind: BSc
+  - year: ongoing
+
+* Natural Language Interface for Trading Strategies: A DSL and LLM Approach
+  - student: Daniel Šoltýs
+  - kind: BSc
+  - year: ongoing
+
+* Type provider for the UniProt knowledge base
+  - student: Kseniia Popova
+  - year: 2025
+  - kind: BSc
+
+* Data transformations in Vega
+  - student: Petrlíková Kristýna  
+  - year: 2025
+  - kind: BSc
+
 * Reconstructing the Boxer programming system for the web
   - student: Jan Markvart
   - year: ongoing
   - kind: BSc
-  
+
 * Abstract Interpretation of pandas
   - student: Jan Hrubý
   - year: 2024
@@ -75,12 +101,12 @@
 
 * Data-driven Low-code Programming System
   - student: Jaroslav Švarc    
-  - year: ongoing
+  - year: 2025
   - kind: BSc
 
 * Interactive Pandemic Simulation to Encourage Critical Thinking
   - student: Sára Goldscheiderová
-  - year: ongoing
+  - year: 2025
   - kind: BSc
 
 * Design of LLM Prompts for Iterative Data Exploration
@@ -188,7 +214,7 @@
   - institution: University of Kent
   - range: 2018/2019 – 2021/2022
   - year: 2018
-  - years: 2018/19, 2019/20, 2021/22 
+  - years: 2018/19, 2019/20, 2021/22
   - label: *Final year project supervision*
 
 * Year in Computing Project (CO580), BSc
@@ -201,14 +227,14 @@
 * Project and Dissertation (CO880), MSc
   - institution: University of Kent
   - range: 2018/19 – 2021/2022
-  - years: Spring 2018/19, Spring 2019/20, Spring 2021/22 
+  - years: Spring 2018/19, Spring 2019/20, Spring 2021/22
   - year: 2018
   - label: *Thesis supervision*
 
 * Project Research (CO880), MSc
   - institution: University of Kent
   - range: 2018/19 – 2021/2022
-  - years: Autumn 2018/19, Autumn 2019/20, Autumn 2021/22 
+  - years: Autumn 2018/19, Autumn 2019/20, Autumn 2021/22
   - year: 2018
   - label: *Project supervision*
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Curriculum Vitae</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+
+  <header>
+    <h1>Tomas Petricek</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
+  </header>
+
+  <section>
+    <h2>Employment</h3>
+    {% assign expkind = "academic" %}
+    {% include "parts/experience-by-kind" %}
+    <h2>Education</h2>
+    {% assign expkind = "education" %}
+    {% include "parts/experience-by-kind" %}
+  </section>
+  <section>
+    <h2>Research Funding</h2>
+    {% include "parts/research-funding" %}
+  </section>
+  <section>
+    <h2>Awards</h2>
+    {% include "parts/awards" %}
+  </section>
+  <section>
+    <h2>Project Participation</h2>
+    {% include "parts/projects" %}
+  </section>
+  <section>
+    <h2>Publications</h2>
+    {% assign selected_count = 0 %}
+    {% assign workshop_count = 0 %}
+    {% for it in publications %}
+    {% if it.type contains "selected" %}{% assign selected_count = selected_count | plus: 1 %}{% endif %}
+    {% if it.type contains "workshop" %}{% assign workshop_count = workshop_count | plus: 1 %}{% endif %}
+    {% endfor %}
+
+    <p>
+      I'm the author of {{ selected_count }} papers in highly selective conferences and journals,
+      academic monograph that will be published by Cambridge University Press, as well as
+      {{ workshop_count }} other conference and workshop publications. The following lists
+      selected interdisciplinary publications.
+    </p>
+
+    {% assign pubtype = "interdisciplinary" %}
+    {% include "parts/publications-by-type" %}
+  </section>
+
+</article>
+</body>
+</html>

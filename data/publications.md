@@ -3,8 +3,9 @@
 * Cultures of Programming: The Development of Programming Concepts and Methodologies
   - authors: **Tomas Petricek**
   - year: 2025
-  - venue: 351 pages, Cambridge Unviersity Press (in press)
-  - type: monograph
+  - venue: 351 pages, Cambridge Unviersity Press
+  - type: monograph, interdisciplinary
+  - isbn: 9781009492379
   - comment: The book documents important episodes from the history of programming, interprets them using a novel conceptual
        framework and provides programmers, computer scientists and historians of computing with a comprehensive account of
        the history of programming.
@@ -82,7 +83,7 @@
   - venue: Onward!&nbsp;'21: Proceedings of the 2021 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp 114-124
   - year: 2021
   - doi: 10.1145/3486607.3486770
-  - type: selected
+  - type: selected, interdisciplinary
   - scopus: 1
   - gscholar: 1
 
@@ -122,7 +123,7 @@
   - venue: Onward!&nbsp;'15: Proceedings of the 2015 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp. 254-266
   - year: 2015
   - doi: 10.1145/2814228.2814249
-  - type: selected
+  - type: selected, interdisciplinary
   - scopus: 2
   - gscholar: 6
 
@@ -254,7 +255,7 @@
   - venue: The Art, Science and Engineering of Programming, vol. 2, issue 3, no. 12
   - year: 2018
   - doi: 10.22152/programming-journal.org/2018/2/12
-  - type: selected
+  - type: selected, interdisciplinary
   - scopus: 5
   - gscholar: 20
 
@@ -263,7 +264,7 @@
   - venue: The Art, Science and Engineering of Programming, vol. 1, issue 2, no. 14
   - year: 2017
   - doi: 10.22152/programming-journal.org/2017/1/14
-  - type: selected
+  - type: selected, interdisciplinary
   - scopus: 4
   - gscholar: 10
 
@@ -321,9 +322,9 @@
   - authors: **Tomas Petricek**, Joel Jakubovic
   - venue: HaPoC&nbsp;'21: 6th International Conference on the History and Philosophy of Computing
   - venue-too-long: HaPoC&nbsp;'21: Presented at 6th International Conference on the History and Philosophy of Computing
-  - year: 2012
+  - year: 2021
   - url: https://tomasp.net/academic/drafts/complementary
-  - type: workshop
+  - type: workshop, interdisciplinary
 
 * Typed Image-Based Programming with Structure Editing
   - authors: Jonathan Edwards, **Tomas Petricek**
@@ -393,7 +394,7 @@
   - venue: AISB&nbsp;'14: Proceedings of the 40th Annual Convention of the Society for the Study of Artificial Intelligence and the Simulation of Behaviour
   - year: 2014
   - url: https://tomasp.net/academic/papers/philosophy-pl/
-  - type: workshop
+  - type: workshop, interdisciplinary
 
 * Evaluation Strategies for Monadic Computations
   - venue: MSFP&nbsp;'12: Proceedings of International Workshop on Mathematically Structured Functional Programming
