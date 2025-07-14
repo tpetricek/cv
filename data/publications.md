@@ -1,9 +1,23 @@
 # [Publications](#pubs)
 
+* Schema Evolution in Interactive Programming Systems
+  - authors: Jonathan Edwards, **Tomas Petricek**, Tijs van der Storm and Geoffrey Litt
+  - venue: The Art, Science, and Engineering of Programming, vol. 9, issue 1, no. 2
+  - doi: 10.22152/programming-journal.org/2025/9/2
+  - type: selected
+  - year: 2025
+
+* Don't Call Us, We'll Call You: Towards Mixed-Initiative Interactive Proof Assistants for Programming Language Theory
+  - authors: Jan Liam Verter, **Tomas Petricek**
+  - venue: HATRA&nbsp;'24: Presented at 5th Workshop on Human Aspects of Types and Reasoning Assistants
+  - year: 2024
+  - arxiv: 2409.13872
+  - type: workshop
+
 * Cultures of Programming: The Development of Programming Concepts and Methodologies
   - authors: **Tomas Petricek**
   - year: 2025
-  - venue: 351 pages, Cambridge Unviersity Press
+  - venue: 420 pages, Cambridge Unviersity Press
   - type: monograph, interdisciplinary
   - isbn: 9781009492379
   - comment: The book documents important episodes from the history of programming, interprets them using a novel conceptual
@@ -50,6 +64,13 @@
       researchers in France, United Kingdom, United States and Germany.
       The associated online catalogue ([tomasp.net/techdims](https://tomasp.net/techdims/)) was accessed 10k+ times.
 
+* Live & Local Schema Change: Challenge Problems
+  - authors: Jonathan Edwards, **Tomas Petricek**, Tijs van der Storm
+  - venue: LIVE&nbsp;'23: Presented at International Workshop on Live Programming
+  - year: 2023
+  - arxiv: 2309.11406
+  - type: workshop
+ 
 * Interaction vs. Abstraction: Managed Copy and Paste
   - authors: Jonathan Edwards and **Tomas Petricek**
   - venue: PAINT&nbsp;'22: Proceedings of the 1st ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments, pp 11-19
