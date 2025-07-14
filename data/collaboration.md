@@ -1,5 +1,10 @@
 ﻿# [Visits](#visits)
 
+* IFIP 2.16 Working Group, Serpiano
+  - date: April 2025
+  - year: 2025
+  - label: Week-long members meeting, talk on computational substrates
+
 * IFIP 2.16 Working Group, CMU
   - date: March 2024
   - year: 2024
@@ -86,6 +91,13 @@
   - label: Two-week visit focused on context-aware computing
 
 # [Invited talks](#invited)
+
+* PLISS Summer School
+  - title: Programming systems deserve a theory too!
+  - date: June 2025
+  - year: 2025
+  - kind: Invited Talk
+  - location: Bertinoro
 
 * ASL/APA Meeting
   - title: Cultures of programming
