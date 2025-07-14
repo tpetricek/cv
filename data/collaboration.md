@@ -161,7 +161,7 @@
     * Collaboration resulted in a joint paper in *IEEE Transactions on Knowledge and Data Engineering*.
 
 * ExtremeXP
-  - range: 2023 – present
+  - range: 2023 – 2024
   - start: 2023
   - institution: Horizon Europe, MFF UK
   - role: Member
@@ -170,7 +170,7 @@
     * Novel visualization design, presented at an internal project meeting.
 
 * PROGRAMme: What is a computer program?
-  - range: 2017 – present
+  - range: 2017 – 2024
   - start: 2017
   - institution: ANR France
   - role: Member
@@ -224,42 +224,4 @@
   - venue: NDC Oslo
   - year: 2018
   - link: https://youtu.be/Bnm71YEt_lI
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-oss
-publications
+    
