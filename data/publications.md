@@ -1,10 +1,17 @@
 # [Publications](#pubs)
 
+* Denicek: Computational Substrate for Document-Oriented End-User Programming
+  - authors: **Tomas Petricek**, Jonathan Edwards
+  - venue: Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology (UIST '25), no. 32, pp. 1-19
+  - doi: {10.1145/3746059.3747646}
+  - type: selected, 5yeartop
+  - year: 2025
+
 * Schema Evolution in Interactive Programming Systems
   - authors: Jonathan Edwards, **Tomas Petricek**, Tijs van der Storm and Geoffrey Litt
   - venue: The Art, Science, and Engineering of Programming, vol. 9, issue 1, no. 2
   - doi: 10.22152/programming-journal.org/2025/9/2
-  - type: selected
+  - type: selected, 5yeartop
   - year: 2025
 
 * Don't Call Us, We'll Call You: Towards Mixed-Initiative Interactive Proof Assistants for Programming Language Theory
@@ -12,13 +19,13 @@
   - venue: HATRA&nbsp;'24: Presented at 5th Workshop on Human Aspects of Types and Reasoning Assistants
   - year: 2024
   - arxiv: 2409.13872
-  - type: workshop
+  - type: workshop, 5yeartop
 
 * Cultures of Programming: The Development of Programming Concepts and Methodologies
   - authors: **Tomas Petricek**
   - year: 2025
   - venue: 420 pages, Cambridge Unviersity Press
-  - type: monograph, interdisciplinary
+  - type: monograph, interdisciplinary, 5yeartop
   - isbn: 9781009492379
   - comment: The book documents important episodes from the history of programming, interprets them using a novel conceptual
        framework and provides programmers, computer scientists and historians of computing with a comprehensive account of
@@ -44,7 +51,7 @@
   - doi: 10.1109/TKDE.2022.3222538
   - if: 8.9
   - year: 2023
-  - type: selected
+  - type: selected, 5yeartop
   - citations: aia
   - gscholar: 6
   - wos: 1
@@ -55,7 +62,7 @@
   - venue: The Art, Science, and Engineering of Programming, vol. 7, issue 3, no. 13
   - doi: 10.22152/programming-journal.org/2023/7/13
   - year: 2023
-  - type: selected
+  - type: selected, 5yeartop
   - gscholar: 16
   - scopus: 4
   - impact: This recent paper, already with 16 citations (4 Scopus), makes explicit the distinction between programming languages
@@ -92,7 +99,7 @@
   - venue: Proceedings of the ACM on Programming Languages, vol. 6 (POPL), pp. 1-29
   - year: 2022
   - doi: 10.1145/3498668
-  - type: selected
+  - type: selected, 5yeartop
   - if: 1.8
   - citations: galois
   - gscholar: 4
@@ -294,7 +301,7 @@
   - venue: VL/HCC&nbsp;'22: Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing
   - year: 2022
   - doi: 10.1109/VL/HCC53370.2022.9833134
-  - type: selected
+  - type: selected, 5yeartop
   - gscholar: 4
   - scopus: 1
 
@@ -304,7 +311,7 @@
   - year: 2023
   - doi: 10.1017/S0047279421000714
   - if: 1.9
-  - type: selected
+  - type: selected, 5yeartop
   - citations: covid
   - gscholar: 3
   - wos: 2
@@ -316,7 +323,7 @@
   - year: 2021
   - doi: 10.1017/S0956796821000046
   - if: 1.1
-  - type: selected
+  - type: selected, 5yeartop
   - citations: compost
   - gscholar: 1
   - wos: 1

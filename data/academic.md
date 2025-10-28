@@ -50,7 +50,7 @@
   - institution: ACM
   - range: 2010, 2012, 2014
   - start: 2010
-  - value: 3x$1000
+  - value: $1500
   - label: As an ACM Student Research Competition finalist, I was repeatedly awarded travel grants covering
       travel and registration expenses for top-tier programming language conferences PLDI 2010, ICFP 2012, ICFP 2014.
 

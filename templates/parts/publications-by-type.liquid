@@ -13,7 +13,9 @@
       {% if it.url != "" %}{{ it.url }},{% endif %} 
       {% if it.isbn != "" %}ISBN {{ it.isbn }},{% endif %} 
       {{ it.year }}</p>
+    {% if pubstyle contains "brief" %}{% else %}
     {% if it.comment != "" %}<p>{{ it.comment }}</p>{% endif %} 
+    {% endif %}
   </li>
   {% endif %}
   {% endfor %}

@@ -3,7 +3,7 @@
   {% for it in funding_by_start %}
   <li>
     <p><strong>{{ it.grant }}, {{ it.institution }}</strong>, 
-      {% if fundstyle contains "brief" %}, Award value {{ it.value }} ({{ it.range }}){% else %}{{ it.range }}{% endif %}</p>
+      {% if fundstyle contains "brief" %} Award value {{ it.value }} ({{ it.range }}){% else %}{{ it.range }}{% endif %}</p>
     {% if fundstyle contains "brief" %}{% else %}
     <p>{{ it.label }}</p>
     {% endif %}
