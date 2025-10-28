@@ -1,5 +1,10 @@
 ﻿# [Visits](#visits)
 
+* IFIP 2.16 Working Group, Serpiano
+  - date: April 2025
+  - year: 2025
+  - label: Week-long members meeting, talk on computational substrates
+
 * IFIP 2.16 Working Group, CMU
   - date: March 2024
   - year: 2024
@@ -87,6 +92,13 @@
 
 # [Invited talks](#invited)
 
+* PLISS Summer School
+  - title: Programming systems deserve a theory too!
+  - date: June 2025
+  - year: 2025
+  - kind: Invited Talk
+  - location: Bertinoro
+
 * ASL/APA Meeting
   - title: Cultures of programming
   - date: April 2023
@@ -149,7 +161,7 @@
     * Collaboration resulted in a joint paper in *IEEE Transactions on Knowledge and Data Engineering*.
 
 * ExtremeXP
-  - range: 2023 – present
+  - range: 2023 – 2024
   - start: 2023
   - institution: Horizon Europe, MFF UK
   - role: Member
@@ -158,7 +170,7 @@
     * Novel visualization design, presented at an internal project meeting.
 
 * PROGRAMme: What is a computer program?
-  - range: 2017 – present
+  - range: 2017 – 2024
   - start: 2017
   - institution: ANR France
   - role: Member
@@ -212,42 +224,4 @@
   - venue: NDC Oslo
   - year: 2018
   - link: https://youtu.be/Bnm71YEt_lI
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-oss
-publications
+    
