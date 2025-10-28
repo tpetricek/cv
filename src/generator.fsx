@@ -27,7 +27,7 @@ type Employment =
     range : string; label : string; kind : string }
 
 type Funding = 
-  { grant : string; institution : string; start : int; 
+  { grant : string; institution : string; start : int; value: string
     range : string; label : string; role : string; outputs : seq<Output> }
 
 type Award = 

@@ -9,6 +9,20 @@
   - label-long: Program change tracking with applications in AI research. Now Early Career Advanced
       Fellow, Institute of Computing for Climate Science, *University of Cambridge*.
 
+* Pablo Donato
+  - role: Post-doctoral Researcher
+  - institution: Charles University
+  - range: 2025 – present
+  - start: 2025
+  - label: Research topic *Logical Foundations for Interactive Programming Systems*.
+
+*  Tianyao Zhou 
+  - role: PhD Student
+  - institution: Charles University
+  - range: 2025 – present
+  - start: 2025
+  - label: Thesis *Materialized Execution Traces for Programming Systems*.
+
 * Joel Jakubovic
   - role: Post-doctoral Researcher
   - institution: Charles University

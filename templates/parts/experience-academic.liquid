@@ -1,11 +1,12 @@
-<h3>Education and Positions</h3>
 <ul>
   {% assign experience_by_start = experience | sort:"start" | reverse %}
   {% for it in experience_by_start %}
   {% if it.kind contains "academic" or it.kind contains "education" %}
   <li>
     <p><strong>{{ it.role }}, {{ it.institution }}</strong>, {{ it.range }}</p>
+    {% if expstyle contains "brief" %}{% else %}
     <p>{{ it.label }}</p>
+    {% endif %}
   </li>
   {% endif %}
   {% endfor %}

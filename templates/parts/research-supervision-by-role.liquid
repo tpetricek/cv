@@ -1,10 +1,12 @@
-<ul class="semicondensed">
+<ul class="{% if supstyle contains "brief" %}condensed{% else %}semicondensed{% endif %}">
   {% assign super_by_start = supervision | sort:"start" | reverse %}
   {% for it in super_by_start %}
   {% if it.role contains suprole %}
   <li>
     <p><strong>{{ it.person }}</strong> ({{ it.role }}), {{ it.institution }}, {{ it.range }}</p>
+    {% if supstyle contains "brief" %}{% else %}
     <p>{{ it.label }}</p>
+    {% endif %}
   </li>
   {% endif %}
   {% endfor %}

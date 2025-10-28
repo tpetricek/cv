@@ -20,6 +20,8 @@ Tomas Petricek is an assistant professor Charles University. He is interested in
   except for a list of publications (5 pages)
 * [**Brief academic version**](academic.html) ([PDF](academic.pdf)) - Two-page academic CV
   and academic service for admin purposes (3 pages)
+* [**Interdisciplinary version**](interdisciplinary.html) ([PDF](interdisciplinary.pdf)) -
+  Two-page academic CV with interdisciplinary publications (2 pages)
 * [**Brief admin version**](admin.html) ([PDF](admin.pdf)) - Shorter version focused on teaching
   and academic service for admin purposes (3 pages)
 * [**Publications list**](publications.html) ([PDF](publications.pdf)) - Full list of publications

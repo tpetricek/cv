@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tomas Petricek &mdash; Curriculum Vitae</title>
+  {% include "styles/default" %}
+</head>
+<body>
+<article>
+  {% assign selected_count = 0 %}
+  {% assign workshop_count = 0 %}
+  {% for it in publications %}
+  {% if it.type contains "selected" %}{% assign selected_count = selected_count | plus: 1 %}{% endif %}
+  {% if it.type contains "workshop" %}{% assign workshop_count = workshop_count | plus: 1 %}{% endif %}
+  {% endfor %}
+
+  <header>
+    <h1>Tomas Petricek</h1>
+    <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
+  </header>
+
+  <section>
+    <h2>Education and Positions</h2>
+    {% assign expstyle = "brief" %}
+    {% include "parts/experience-academic" %}
+  </section>
+
+  <section>
+    <h2>Recent publications</h2>
+    <p>
+      For historical reasons, highly-selective conference publications are preferred over journal
+      papers in computer science. I am the author of {{ selected_count }} papers in highly-selective 
+      venues (including POPL, PLDI, ICFP, ICALP, ECOOP) and {{ workshop_count }}&nbsp;other peer-reviewed
+      papers. I have an h-index of 16 (6 in WoS) and my work has 1040+
+      citations (188 in WoS).
+    </p>
+
+    {% assign pubyears = "2025,2024,2023,2022,2021" %}
+    {% assign pubtype = "monograph, interdisciplinary, selected, workshop" %}
+    {% include "parts/publications-by-years" %}
+  </section>
+ 
+  <section>
+    <h2>Academic Recognition and Collaboration</h2>
+    <h3>Professional Membership</h3>
+    {% include "parts/membership" %}
+  </section>
+  <section>
+    <h3>Awards</h3>
+    {% include "parts/awards" %}
+  </section>
+  <section>
+    {% include "parts/refereeing-selected" %}
+  </section>
+
+  <section>
+    <h3>Research Supervision</h3>
+    {% assign suprole = "" %}
+    {% assign supstyle = "brief" %}
+    {% include "parts/research-supervision-by-role" %}
+  </section>
+  <section>
+    <h3>Research Funding</h3>
+    {% assign fundstyle = "brief" %}
+    {% include "parts/research-funding" %}
+  </section>
+
+</article>
+</body>
+</html>

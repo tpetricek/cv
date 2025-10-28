@@ -4,6 +4,7 @@
   - institution: Charles University
   - range: 2024 – 2028
   - start: 2024
+  - value: €610,000
   - role: Principal Investigator
   - label: Awarded €610,000 for research on *Types for data-centric programming* to cover 60% FTE of
       my time, two post-docs for 24 months each and 2 PhD students for the duration of the project.
@@ -15,6 +16,7 @@
   - institution: The Alan Turing Institute
   - range: 2017 – 2020
   - start: 2017
+  - value: £420,000
   - role: Principal Investigator
   - label: Awarded £420,000 for research on tooling for data science to cover a post-doc for 6 months,
       Research Software Engineer for 3 years, 3 summer interns, my salary/buyout for 1 day/week.
@@ -26,6 +28,7 @@
   - institution: Google Digital News Initiative
   - range: 2016
   - start: 2016
+  - value: €50,000
   - role: Principal Investigator
   - label: Awarded €50,000 for research on *Programming tools for data journalism*. My proposal was selected as one
       of 128 out of 1,200 and allowed me to develop an independent research project at The Alan Turing Institute.
@@ -37,6 +40,7 @@
   - institution: ACM History Committee
   - range: 2018
   - start: 2018
+  - value: $4000
   - label: Awarded $4000 to study the history of programming errors, looking at technical, formal and
       social means for mitigating them, resulting in a work-in-progress book *Cultures of Programming*.
   - outputs:
@@ -46,6 +50,7 @@
   - institution: ACM
   - range: 2010, 2012, 2014
   - start: 2010
+  - value: 3x$1000
   - label: As an ACM Student Research Competition finalist, I was repeatedly awarded travel grants covering
       travel and registration expenses for top-tier programming language conferences PLDI 2010, ICFP 2012, ICFP 2014.
 
