@@ -2,6 +2,9 @@
 
 ## [Program Committee Member](#pc)
 
+* HATRA, 2025
+* Undone CS, 2025
+* LIVE, 2025
 * HaPoP, 2024
 * OOPSLA, 2024, *
 * Onward!, 2024, *
@@ -49,11 +52,13 @@
 ## [Reviewer](#reviewer)
 
 * UIST
+* CHI
 * Computing
 * TOPLAS
 * Programming
 * Minds and Machines
 * Philosophy & Technology
+* Philosophia Scientiæ
 * ECOOP
 * PLoP
 * Simulation
@@ -72,10 +77,11 @@
 
 ## [PhD Examiner](#phd)
 
-* University of Ghent, 2022
-* CTU Prague, 2023
-* Université Paris-Saclay, 2024
+* Aarhus University, 2025
 * Hasso Plattner Institute, 2025
+* Université Paris-Saclay, 2024
+* CTU Prague, 2023
+* University of Ghent, 2022
 
 ## [Grant Reviewer](#grant)
 
