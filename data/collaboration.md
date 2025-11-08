@@ -1,5 +1,10 @@
 ﻿# [Visits](#visits)
 
+* Aarhus University
+  - date: November 2025
+  - year: 2025
+  - label: Two-day visit for a PhD defense and research collaboration
+  
 * IFIP 2.16 Working Group, Serpiano
   - date: April 2025
   - year: 2025
