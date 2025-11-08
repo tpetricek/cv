@@ -16,7 +16,7 @@
   - start: 2025
   - label: Research topic *Logical Foundations for Interactive Programming Systems*.
 
-*  Tianyao Zhou 
+* Tianyao Zhou
   - role: PhD Student
   - institution: Charles University
   - range: 2025 – present
@@ -33,7 +33,7 @@
 * Aleks Boruch-Gruszecki
   - role: Post-doctoral Researcher
   - institution: Charles University
-  - range: 2024 – present
+  - range: 2024 – 2025
   - start: 2024
   - label: Co-supervised with *Prof Jan Vitek*.
 
@@ -67,16 +67,45 @@
 
 # [Advising](#advising)
 
-* Benchmarking a baseline fully-in-place functional language compiler
-  - student: Jaromír Procházka
+* Interactive tactic-based program synthesis
+  - student: Martínez Quintero Carlos Fernando Amador
   - kind: BSc
   - year: ongoing
 
+* KodeMorph: Automatic code refactoring based on data transformations
+  - student: Le Duc Hung
+  - kind: BSc
+  - year: ongoing
+ 
+* Versed: A schema definition language with support for schema evolution
+  - student: Swart Benjamin
+  - kind: BSc
+  - year: ongoing
+  
+* Benchmarking a baseline fully-in-place functional language compiler
+  - student: Jaromír Procházka
+  - kind: BSc
+  - year: 2025
 
+* Data transformations in Vega
+  - student: Petrlíková Kristýna  
+  - year: 2025
+  - kind: BSc
+    
 * Interactive environment for visual creative coding
   - student: Erika Kunová
   - kind: BSc
   - year: ongoing
+
+* MetaGraph: Constructing graph-based agents through meta-programming
+  - student: Pospěch Michal
+  - kind: MSc
+  - year: 2025
+
+* Reconstructing the Boxer programming system for the web
+  - student: Jan Markvart
+  - year: ongoing
+  - kind: BSc
 
 * Natural Language Interface for Trading Strategies: A DSL and LLM Approach
   - student: Daniel Šoltýs
@@ -86,16 +115,6 @@
 * Type provider for the UniProt knowledge base
   - student: Kseniia Popova
   - year: 2025
-  - kind: BSc
-
-* Data transformations in Vega
-  - student: Petrlíková Kristýna  
-  - year: 2025
-  - kind: BSc
-
-* Reconstructing the Boxer programming system for the web
-  - student: Jan Markvart
-  - year: ongoing
   - kind: BSc
 
 * Abstract Interpretation of pandas
@@ -177,8 +196,15 @@
 * Write Your Own Tiny Programming Systems (NPRG077)
   - institution: Charles University
   - range: 2023/2024 – present
-  - years: Winter 2023/24
-  - year: 2023
+  - years: Winter 2023/24, Winter 2025/26
+  - year: 2025
+
+* Programming in C# Language (NPRG035)
+  - institution: Charles University
+  - range: 2025/26
+  - years: Summer 2025/26
+  - year: 2025
+  - label: *Course lab supervisor*
 
 * Advanced C# Programming (NPRG038)
   - institution: Charles University
