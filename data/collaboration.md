@@ -97,6 +97,13 @@
 
 # [Invited talks](#invited)
 
+* 36th Annual Workshop of The Psychology of Programming Interest Group (PPIG)
+  - title: Critical Architecture / Software Theory
+  - date: September 2025
+  - year: 2025
+  - kind: Invited Talk
+  - location: Belgrade, Serbia
+    
 * PLISS Summer School
   - title: Programming systems deserve a theory too!
   - date: June 2025
