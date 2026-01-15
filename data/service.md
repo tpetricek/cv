@@ -2,6 +2,7 @@
 
 ## [Program Committee Member](#pc)
 
+* PX, 2026
 * HATRA, 2025
 * Undone CS, 2025
 * LIVE, 2025
