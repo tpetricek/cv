@@ -46,6 +46,8 @@
   - outputs:
     - Draft paper, serving as the basis for Cambridge University Press monograph *Cultures of Programming*
 
+# [Former funding](#oldfunding)
+
 * Travel Grants
   - institution: ACM
   - range: 2010, 2012, 2014
@@ -85,6 +87,8 @@
   - venue: PLDI 2016
   - year: 2016
   - label: Awarded for a paper on types for semi-structured data
+
+# [Former awards](#oldawards)
 
 * ACM Student Research Competition
   - year: 2012

@@ -19,15 +19,36 @@
   </header>
 
   <section>
-    <h2>Academic Experience</h2>
-    <h3>Positions</h3>
-    {% assign expkind = "academic" %}
-    {% assign expstyle = "brief" %}
-    {% include "parts/experience-by-kind" %}
-    <h3>Education</h3>
+    <h2>Academic education</h2>
     {% assign expkind = "education" %}
     {% assign expstyle = "" %}
     {% include "parts/experience-by-kind" %}
+  </section>
+
+  <section>
+    <h2>Professional experience</h2>
+    {% assign expkind = "academic" %}
+    {% assign expstyle = "brief" %}
+    {% include "parts/experience-by-kind" %}
+  </section>
+
+  <section>
+    <h2>Research Funding</h2>
+    {% assign fundstyle = "brief" %}
+    {% include "parts/research-funding" %}
+  </section>
+
+  <section>
+    <h2>Professional Membership</h2>
+    {% include "parts/membership" %}
+  </section>
+  <section>
+    <h2>Awards</h2>
+    {% include "parts/awards" %}
+  </section>
+  <section>
+    <h2>Keynotes and Invited Talks</h2>
+    {% include "parts/invited-talks" %}
   </section>
 
   <section>
@@ -36,38 +57,13 @@
       For historical reasons, highly-selective conference publications are preferred over journal
       papers in computer science. I am the author of {{ selected_count }} papers in highly-selective
       venues (including POPL, PLDI, ICFP, ICALP, ECOOP) and {{ workshop_count }}&nbsp;other peer-reviewed
-      papers. I have an h-index of 16 (6 in WoS) and my work has 1040+
-      citations (188 in WoS).
+      papers. I have an h-index of 16 (7 in WoS) and my work has 1080+
+      citations (233 in WoS).
     </p>
 
     {% assign pubstyle = "brief" %}
     {% assign pubtype = "5yeartop" %}
     {% include "parts/publications-by-type" %}
-  </section>
-
-  <section>
-    <h2>Academic Recognition and Collaboration</h2>
-    <h3>Professional Membership</h3>
-    {% include "parts/membership" %}
-  </section>
-  <section>
-    <h3>Awards</h3>
-    {% include "parts/awards" %}
-  </section>
-  <section>
-    {% include "parts/refereeing-selected" %}
-  </section>
-
-  <section>
-    <h3>Research Supervision</h3>
-    {% assign suprole = "" %}
-    {% assign supstyle = "brief" %}
-    {% include "parts/research-supervision-by-role" %}
-  </section>
-  <section>
-    <h3>Research Funding</h3>
-    {% assign fundstyle = "brief" %}
-    {% include "parts/research-funding" %}
   </section>
 
 </article>

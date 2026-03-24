@@ -4,7 +4,7 @@
   - date: November 2025
   - year: 2025
   - label: Two-day visit for a PhD defense and research collaboration
-  
+
 * IFIP 2.16 Working Group, Serpiano
   - date: April 2025
   - year: 2025
@@ -97,13 +97,21 @@
 
 # [Invited talks](#invited)
 
-* 36th Annual Workshop of The Psychology of Programming Interest Group (PPIG)
+* Undone Science in Computer Science
+  - title: Undone Ideas on Programming
+  - title-too-long: Undone Ideas on Programming: When Cultures Fail to Meet
+  - date: March 2026
+  - year: 2026
+  - kind: Keynote
+  - location: Luxembourg
+
+* Workshop of The Psychology of Programming Interest Group (PPIG)
   - title: Critical Architecture / Software Theory
   - date: September 2025
   - year: 2025
-  - kind: Invited Talk
+  - kind: Keynote
   - location: Belgrade, Serbia
-    
+
 * PLISS Summer School
   - title: Programming systems deserve a theory too!
   - date: June 2025
@@ -236,4 +244,3 @@
   - venue: NDC Oslo
   - year: 2018
   - link: https://youtu.be/Bnm71YEt_lI
-    

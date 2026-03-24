@@ -49,8 +49,8 @@
   - kind: education
   - label: Thesis *Simple Programming Tools for Data Exploration* uses programming language theory research
       methods to develop novel data science tools. The thesis summarizes research on F# type providers,
-      data journalism and programming tools done in Microsoft Research, The Alan Turing Institute and
-      at the University of Kent.
+      data journalism and programming tools done in *Microsoft Research*, *The Alan Turing Institute* and
+      at the *University of Kent*.
 
 * PhD
   - institution: Computer Laboratory, University of Cambridge

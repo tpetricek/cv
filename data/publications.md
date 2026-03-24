@@ -1,6 +1,6 @@
 # [Publications](#pubs)
 
-* Languages, Compilers, Analysis - From Beautiful Theory to Useful Practice 
+* Languages, Compilers, Analysis - From Beautiful Theory to Useful Practice
   - authors: Dominic Orchard, **Tomas Petricek**, Jeremy Singer (eds.)
   - venue:  Lecture Notes in Computer Science, vol. 15500, Springer. 263 pages
   - isbn: 978-3-032-08187-2
@@ -11,9 +11,9 @@
   - authors: **Tomas Petricek**, Joel Jakubovic
   - venue: Languages, Compilers, Analysis-From Beautiful Theory to Useful Practice: Essays Dedicated to Alan Mycroft on the Occasion of His Retirement, LNCS, vol. 15500, Springer
   - doi: 10.1007/978-3-032-08187-2_11
-  - type: selected
+  - type: selected, 5yeartop
   - year: 2025
-    
+
 * Denicek: Computational Substrate for Document-Oriented End-User Programming
   - authors: **Tomas Petricek**, Jonathan Edwards
   - venue: Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology (UIST '25), no. 32, pp. 1-19
@@ -25,7 +25,7 @@
   - authors: Jonathan Edwards, **Tomas Petricek**, Tijs van der Storm and Geoffrey Litt
   - venue: The Art, Science, and Engineering of Programming, vol. 9, issue 1, no. 2
   - doi: 10.22152/programming-journal.org/2025/9/2
-  - type: selected, 5yeartop
+  - type: selected
   - year: 2025
 
 * Don't Call Us, We'll Call You: Towards Mixed-Initiative Interactive Proof Assistants for Programming Language Theory
@@ -33,7 +33,7 @@
   - venue: HATRA&nbsp;'24: Presented at 5th Workshop on Human Aspects of Types and Reasoning Assistants
   - year: 2024
   - arxiv: 2409.13872
-  - type: workshop, 5yeartop
+  - type: workshop
 
 * Cultures of Programming: The Development of Programming Concepts and Methodologies
   - authors: **Tomas Petricek**
@@ -91,7 +91,7 @@
   - year: 2023
   - arxiv: 2309.11406
   - type: workshop
- 
+
 * Interaction vs. Abstraction: Managed Copy and Paste
   - authors: Jonathan Edwards and **Tomas Petricek**
   - venue: PAINT&nbsp;'22: Proceedings of the 1st ACM SIGPLAN International Workshop on Programming Abstractions and Interactive Notations, Tools, and Environments, pp 11-19
