@@ -1,9 +1,23 @@
 # [Publications](#pubs)
 
+* Languages, Compilers, Analysis - From Beautiful Theory to Useful Practice 
+  - authors: Dominic Orchard, **Tomas Petricek**, Jeremy Singer (eds.)
+  - venue:  Lecture Notes in Computer Science, vol. 15500, Springer. 263 pages
+  - isbn: 978-3-032-08187-2
+  - year: 2025
+  - type: editorial
+
+* On the Limits of Making Programming Easy
+  - authors: **Tomas Petricek**, Joel Jakubovic
+  - venue: Languages, Compilers, Analysis-From Beautiful Theory to Useful Practice: Essays Dedicated to Alan Mycroft on the Occasion of His Retirement, LNCS, vol. 15500, Springer
+  - doi: 10.1007/978-3-032-08187-2_11
+  - type: selected
+  - year: 2025
+    
 * Denicek: Computational Substrate for Document-Oriented End-User Programming
   - authors: **Tomas Petricek**, Jonathan Edwards
   - venue: Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology (UIST '25), no. 32, pp. 1-19
-  - doi: {10.1145/3746059.3747646}
+  - doi: 10.1145/3746059.3747646
   - type: selected, 5yeartop
   - year: 2025
 
@@ -23,7 +37,7 @@
 
 * Cultures of Programming: The Development of Programming Concepts and Methodologies
   - authors: **Tomas Petricek**
-  - year: 2025
+  - year: 2026
   - venue: 420 pages, Cambridge Unviersity Press
   - type: monograph, interdisciplinary, 5yeartop
   - isbn: 9781009492379
