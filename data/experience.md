@@ -1,8 +1,14 @@
 # [Experience](#experience)
 
+* Associate Professor
+  - institution: Charles University, Prague
+  - range: 2026 – present
+  - start: 2026
+  - kind: academic, permanent
+
 * Assistant Professor
   - institution: Charles University, Prague
-  - range: 2022 – present
+  - range: 2022 – 2026
   - start: 2022
   - kind: academic, permanent
   - label: I joined the *Department of Distributed and Dependable Systems* at Faculty of Mathematics
@@ -35,6 +41,16 @@
   - kind: academic, postdoc, international
   - label: I led the development of an open-source projects focused on doing data science with F#.
       Resulting research was awarded a *Distinguished Paper* award and selected as an *SIGPLAN Research Highlight*.
+
+* Habilitation
+  - institution: Faculty of Mathematics and Physics, Charles University
+  - range: 2026
+  - start: 2026
+  - kind: education
+  - label: Thesis *Simple Programming Tools for Data Exploration* uses programming language theory research
+      methods to develop novel data science tools. The thesis summarizes research on F# type providers,
+      data journalism and programming tools done in Microsoft Research, The Alan Turing Institute and
+      at the University of Kent.
 
 * PhD
   - institution: Computer Laboratory, University of Cambridge
