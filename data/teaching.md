@@ -23,6 +23,13 @@
   - start: 2025
   - label: Thesis *Materialized Execution Traces for Programming Systems*.
 
+* Sidney Congard
+  - role: Research Internship
+  - institution: Charles University
+  - range: 2026
+  - start: 2026
+  - label: Collaborating on Rust borrowing and interactive theorem provers
+
 * Joel Jakubovic
   - role: Post-doctoral Researcher
   - institution: Charles University
@@ -67,6 +74,21 @@
 
 # [Advising](#advising)
 
+* Collaborative Editing of Structured Documents in Denicek
+  - student: Ondřej Krsička
+  - kind: MSc
+  - year: ongoing
+
+* Timeline - Adding the Time Dimension to Spreadsheets
+  - student: Tomáš Boďa
+  - kind: MSc
+  - year: ongoing
+
+* Using runtime information to improve LLM code generation
+  - student: Tymofii Shchetilin
+  - kind: BSc
+  - year: ongoing
+
 * Interactive tactic-based program synthesis
   - student: Martínez Quintero Carlos Fernando Amador
   - kind: BSc
@@ -76,12 +98,12 @@
   - student: Le Duc Hung
   - kind: BSc
   - year: ongoing
- 
+
 * Versed: A schema definition language with support for schema evolution
   - student: Swart Benjamin
   - kind: BSc
   - year: ongoing
-  
+
 * Benchmarking a baseline fully-in-place functional language compiler
   - student: Jaromír Procházka
   - kind: BSc
@@ -91,11 +113,11 @@
   - student: Petrlíková Kristýna  
   - year: 2025
   - kind: BSc
-    
+
 * Interactive environment for visual creative coding
   - student: Erika Kunová
   - kind: BSc
-  - year: ongoing
+  - year: 2025
 
 * MetaGraph: Constructing graph-based agents through meta-programming
   - student: Pospěch Michal
@@ -104,13 +126,13 @@
 
 * Reconstructing the Boxer programming system for the web
   - student: Jan Markvart
-  - year: ongoing
+  - year: 2025
   - kind: BSc
 
 * Natural Language Interface for Trading Strategies: A DSL and LLM Approach
   - student: Daniel Šoltýs
   - kind: BSc
-  - year: ongoing
+  - year: 2025
 
 * Type provider for the UniProt knowledge base
   - student: Kseniia Popova
@@ -198,6 +220,13 @@
   - range: 2023/2024 – present
   - years: Winter 2023/24, Winter 2025/26
   - year: 2025
+
+* Principles of Programming Languages (NPRG084)
+  - institution: MFF
+  - range: 2025/26
+  - years: Summer 2025/26
+  - year: 2026
+  - label: *Lab supervisor & course coauthor*
 
 * Programming in C# Language (NPRG035)
   - institution: Charles University

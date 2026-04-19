@@ -1,5 +1,10 @@
 ﻿# [Visits](#visits)
 
+* INRIA / Université Paris-Saclay
+  - date: March 2026
+  - year: 2026
+  - label: Three-day visit, collaborating on computational substrates
+
 * Aarhus University
   - date: November 2025
   - year: 2025
@@ -8,12 +13,12 @@
 * IFIP 2.16 Working Group, Serpiano
   - date: April 2025
   - year: 2025
-  - label: Week-long members meeting, talk on computational substrates
+  - label: Week-long meeting, talk on computational substrates
 
 * IFIP 2.16 Working Group, CMU
   - date: March 2024
   - year: 2024
-  - label: Guest at a week-long meeting, talk on theory of programming systems
+  - label: Guest at a week-long meeting, talk on programming systems
 
 * HPI Potsdam
   - date: November 2023
@@ -50,7 +55,7 @@
   - year: 2020
   - label: Virtual invited talk on types for data exploration tools
 
-* IFIP 2.16 Working Group, Nice
+* IFIP 2.16 WG, Nice
   - date: November 2019
   - year: 2019
   - label: Guest at a week-long meeting, talk on programming as interaction

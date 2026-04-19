@@ -3,16 +3,12 @@
 <head>
   <title>Tomas Petricek &mdash; Curriculum Vitae</title>
   {% include "styles/default" %}
+  <style type="text/css">
+    h2 { font-weight:400; font-size:16pt; margin-bottom:6pt; margin-top:14pt; }
+  </style>
 </head>
 <body>
 <article>
-  {% assign selected_count = 0 %}
-  {% assign workshop_count = 0 %}
-  {% for it in publications %}
-  {% if it.type contains "selected" %}{% assign selected_count = selected_count | plus: 1 %}{% endif %}
-  {% if it.type contains "workshop" %}{% assign workshop_count = workshop_count | plus: 1 %}{% endif %}
-  {% endfor %}
-
   <header>
     <h1>Tomas Petricek</h1>
     <p><a href="http://tomasp.net">http://tomasp.net</a> | <a href="mailto:tomas@tomasp.net">tomas@tomasp.net</a> | <a href="https://orcid.org/0000-0002-7242-2208">0000-0002-7242-2208</a></p>
@@ -50,20 +46,18 @@
     <h2>Keynotes and Invited Talks</h2>
     {% include "parts/invited-talks" %}
   </section>
+  <section>
+    <h2>Recent Research Visits</h2>
+    {% include "parts/research-visits-5years" %}
+  </section>
 
   <section>
-    <h2>Recent publications</h2>
-    <p>
-      For historical reasons, highly-selective conference publications are preferred over journal
-      papers in computer science. I am the author of {{ selected_count }} papers in highly-selective
-      venues (including POPL, PLDI, ICFP, ICALP, ECOOP) and {{ workshop_count }}&nbsp;other peer-reviewed
-      papers. I have an h-index of 16 (7 in WoS) and my work has 1080+
-      citations (233 in WoS).
-    </p>
-
-    {% assign pubstyle = "brief" %}
-    {% assign pubtype = "5yeartop" %}
-    {% include "parts/publications-by-type" %}
+    <h2>Program Committees and Refereeing</h2>
+    {% include "parts/refereeing-selected" %}
+  </section>
+  <section>
+    <h2>Editorial and Committee Membership</h2>
+    {% include "parts/service" %}
   </section>
 
 </article>

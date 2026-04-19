@@ -49,7 +49,7 @@
 * ML, 2013
 * ISMM, 2012, *
 * CUFP, 2012
-  
+
 ## [Reviewer](#reviewer)
 
 * UIST
@@ -68,9 +68,9 @@
 * ICFP
 * IEEE Access
 * POPL
-* JLAMP 
+* JLAMP
 * PLACES
-* TFP 
+* TFP
 * PPDP
 * CC
 * Computability in Europe  
@@ -94,18 +94,23 @@
 
 # [Community Service](#service)
 
+* Associate Editor
+  - venue: The Art, Science, and Engineering of Programming
+  - range: 2026 - 2027
+  - start: 2026
+  
 * General Chair
-  - venue: International Conference on the Art, Science, and Engineering of Programming 
+  - venue: International Conference on the Art, Science, and Engineering of Programming
   - range: 2025
   - start: 2025
 
 * Steering Committee Member
-  - venue: AOSA, Inc. 
+  - venue: AOSA, Inc.
   - range: 2024 – present
   - start: 2024
 
 * Steering Committee Member
-  - venue: Onward! 
+  - venue: Onward!
   - range: 2019 – present
   - start: 2019
 

@@ -58,6 +58,12 @@
 
 # [Awards](#awards)
 
+* Cena Bedřicha Hrozného
+  - venue: Charles University, 2025
+  - year: 2025
+  - label: Recognizing my monograph *Cultures of Programming* as an outstanding creative
+      achievement, among four other awardees selected by the university for 2025.
+
 * Reviewers’ Choice Award
   - venue: ‹Programming› 2023
   - year: 2023
