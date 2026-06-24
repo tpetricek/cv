@@ -78,6 +78,7 @@
 
 ## [PhD Examiner](#phd)
 
+* ETH Zurich, 2026
 * Aarhus University, 2025
 * Hasso Plattner Institute, 2025
 * Université Paris-Saclay, 2024
