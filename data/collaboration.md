@@ -1,5 +1,10 @@
 ﻿# [Visits](#visits)
 
+* UC San Diego
+  - date: October 2026
+  - year: 2026
+  - Two-day visit, focused on document-oriented programming systems
+    
 * INRIA / Université Paris-Saclay
   - date: March 2026
   - year: 2026
