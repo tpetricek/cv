@@ -112,6 +112,13 @@
 
 # [Invited talks](#invited)
 
+* Computer Lab Wednesday Seminar
+  - title: Cultures of Programming
+  - date: April 2026
+  - year: 2026
+  - kind: Invited Talk
+  - location: University of Cambridge
+
 * Undone Science in Computer Science
   - title: Undone Ideas on Programming
   - title-too-long: Undone Ideas on Programming: When Cultures Fail to Meet
