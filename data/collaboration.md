@@ -4,7 +4,12 @@
   - date: October 2026
   - year: 2026
   - Two-day visit, focused on document-oriented programming systems
-    
+
+* University of Cambridge
+  - date: April 2026
+  - year: 2026
+  - label: Three-day visit with invited talk at the Wednesday seminar
+  
 * INRIA / Université Paris-Saclay
   - date: March 2026
   - year: 2026
