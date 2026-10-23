@@ -2,6 +2,8 @@
 
 ## [Program Committee Member](#pc)
 
+* OOPSLA, 2027, *
+* ICFP, 2027, *
 * PX, 2026
 * HATRA, 2025
 * Undone CS, 2025
