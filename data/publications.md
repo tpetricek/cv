@@ -1,18 +1,51 @@
 # [Publications](#pubs)
 
-* Languages, Compilers, Analysis - From Beautiful Theory to Useful Practice
-  - authors: Dominic Orchard, **Tomas Petricek**, Jeremy Singer (eds.)
-  - venue:  Lecture Notes in Computer Science, vol. 15500, Springer. 263 pages
-  - isbn: 978-3-032-08187-2
-  - year: 2025
-  - type: editorial
+* Timeline: Adding the Time Dimension to Spreadsheets
+  - authors: **Tomas Petricek** and Tomáš Boďa
+  - venue: Proceedings of the ACM on Programming Languages, vol. 10 (OOPSLA2), no. 370, pp. 1546-1575
+  - year: 2026
+  - doi: 10.1145/3839502
+  - type: selected, 5yeartop
 
+* The Choose-Your-Own-Adventure Calculus
+  - authors: **Tomas Petricek**, Jan Liam Verter and Mikoláš Fromm
+  - venue: Onward! '26: Proceedings of the 2026 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp 111-127
+  - year: 2026
+  - doi: 10.1145/3840586.3843213
+  - type: selected
+
+* Towards Critical Abstraction for Software
+  - authors: Alice Mira Chung, Devamardeep Hayatpur, Philip J. Guo and **Tomas Petricek**
+  - venue: Onward! '26: Proceedings of the 2026 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp 215-228
+  - year: 2026
+  - doi: 10.1145/3840586.3843748
+  - type: selected, interdisciplinary
+    
+* Formal Semantics and Type System for Vega Data Transformations
+  - authors: Kristýna Petrlíková and **Tomas Petricek**
+  - venue: FTfJP '26: Proceedings of the 2026 Workshop on Formal Techniques for Judicious Programming, Brussels, Belgium (to appear)
+  - year: 2026
+  - type: workshop
+
+* Benchmarking a Baseline Fully-in-Place Functional Language Compiler
+  - authors: Jaromír Procházka, Vít Šefl and **Tomas Petricek**
+  - venue: TFP '26: Trends in Functional Programming, Springer Nature Switzerland, pp. 1-19 (to appear)
+  - year: 2026
+  - type: workshop
+    
 * On the Limits of Making Programming Easy
   - authors: **Tomas Petricek**, Joel Jakubovic
   - venue: Languages, Compilers, Analysis-From Beautiful Theory to Useful Practice: Essays Dedicated to Alan Mycroft on the Occasion of His Retirement, LNCS, vol. 15500, Springer
   - doi: 10.1007/978-3-032-08187-2_11
   - type: selected, 5yeartop
   - year: 2025
+
+* Languages, Compilers, Analysis - From Beautiful Theory to Useful Practice
+  - authors: Dominic Orchard, **Tomas Petricek**, Jeremy Singer (eds.)
+  - venue:  Lecture Notes in Computer Science, vol. 15500, Springer. 263 pages
+  - isbn: 978-3-032-08187-2
+  - year: 2025
+  - type: editorial
 
 * Denicek: Computational Substrate for Document-Oriented End-User Programming
   - authors: **Tomas Petricek**, Jonathan Edwards
